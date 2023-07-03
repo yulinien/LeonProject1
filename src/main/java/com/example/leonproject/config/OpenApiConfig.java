@@ -17,7 +17,7 @@ import io.swagger.v3.oas.annotations.servers.Server;
                         url = "xxxxxxxxxxxxx/xxxxxxx.com"
                 ),
                 description = "Test Swagger For Practice",
-                title = "Test Security API",
+                title = "Test LEON PROJECT API",
                 version = "1.1",
                 license = @License(
                         name = "good license",

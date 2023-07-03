@@ -1,18 +1,21 @@
 package com.example.leonproject.config;
 
+import com.example.leonproject.dao.entity.AccountDO;
+import com.example.leonproject.dao.repository.AccountRepository;
 import com.example.leonproject.util.JWTUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
+
 import java.io.IOException;
 
 @Component
@@ -20,8 +23,12 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
 
     @Autowired
     private JWTUtil tokenGenerator;
+
     @Autowired
     private CustomAccountDetailService customAccountDetailService;
+
+    @Autowired
+    private AccountRepository accountRepository;
 
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
@@ -33,19 +40,17 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
+        System.out.println("有經過這");
         String token = getJWTFromRequest(request);
+        String username = tokenGenerator.getUsernameFromJWT(token);
         if (StringUtils.hasText(token) && tokenGenerator.validateToken(token)) {
-            String username = tokenGenerator.getUsernameFromJWT(token);
-
             UserDetails userDetails = customAccountDetailService.loadUserByUsername(username);
-            UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null,
-                    userDetails.getAuthorities());
-            authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-            SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+            UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+        } else {
+            response.setContentType("application/json");
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         }
-//        else{
-//            response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
-//        }
         filterChain.doFilter(request, response);
     }
 

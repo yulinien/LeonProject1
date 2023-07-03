@@ -28,7 +28,7 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .csrf((csrf) -> csrf.disable())
-
+                .httpBasic((httpBasic) -> httpBasic.disable())
                 .cors(cors -> cors // 開CORS配置
                         .configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(authorize -> authorize
@@ -41,12 +41,10 @@ public class SecurityConfig {
                                 "/configuration/ui",
                                 "/configuration/security",
                                 "/swagger-ui/**",
-                                "/swagger-ui/index.html")
+                                "/swagger-ui/index.html",
+                                "/security/login")
                         .permitAll()
                         .anyRequest().authenticated()
-                )
-                .exceptionHandling(exceptionHandling -> exceptionHandling
-                        .authenticationEntryPoint(unauthorizedEntryPoint())
                 );
         http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
@@ -61,20 +59,8 @@ public class SecurityConfig {
     }
 
     @Bean
-    PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-
-    @Bean
     public JWTAuthenticationFilter jwtAuthenticationFilter() {
         return new JWTAuthenticationFilter();
-    }
-
-
-    @Bean
-    public AuthenticationEntryPoint unauthorizedEntryPoint() {
-        return (request, response, authException) -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
     }
 
 
