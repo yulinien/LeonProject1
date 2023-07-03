@@ -33,7 +33,7 @@ public class LoginController {
             return ResponseEntity.badRequest().body(responseDTO);
         } else {
             HttpHeaders headers = new HttpHeaders();
-//            headers.add("Authorization", "Bearer " + jwtUtil.generateToken(loginDTO.getUsername()));
+            headers.add("Authorization", "Bearer " + jwtUtil.generateToken(loginDTO.getUsername()));
             return ResponseEntity.ok().headers(headers).body(new LoginResponseDTO(1, "Login Success"));
         }
     }
