@@ -21,14 +21,14 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import java.util.Arrays;
 
 @Configuration
-@EnableWebSecurity
+@EnableWebSecurity(debug = true)
 public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+
         http
                 .csrf((csrf) -> csrf.disable())
-                .httpBasic((httpBasic) -> httpBasic.disable())
                 .cors(cors -> cors // 開CORS配置
                         .configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(authorize -> authorize
@@ -46,6 +46,7 @@ public class SecurityConfig {
                         .permitAll()
                         .anyRequest().authenticated()
                 );
+
         http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
@@ -53,16 +54,9 @@ public class SecurityConfig {
     }
 
     @Bean
-    public AuthenticationManager authenticationManager(
-            AuthenticationConfiguration authenticationConfiguration) throws Exception {
-        return authenticationConfiguration.getAuthenticationManager();
-    }
-
-    @Bean
     public JWTAuthenticationFilter jwtAuthenticationFilter() {
         return new JWTAuthenticationFilter();
     }
-
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {

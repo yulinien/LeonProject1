@@ -1,7 +1,12 @@
 package com.example.leonproject.controller.pojo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class RegistrationResponseDTO {
+
+    @JsonProperty("status")
     private int status;
+    @JsonProperty("errorMessage")
     private String errorMessage;
 
     public RegistrationResponseDTO(int status, String errorMessage) {

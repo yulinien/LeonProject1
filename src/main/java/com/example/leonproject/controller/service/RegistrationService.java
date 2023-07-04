@@ -17,6 +17,7 @@ public class RegistrationService {
     }
 
     public RegistrationResponseDTO createUser(RegistrationDTO registrationDTO) {
+
         if (accountRepository.existsByUsername(registrationDTO.getUsername())) {
             return new RegistrationResponseDTO(-1, "Username already existed");
         }

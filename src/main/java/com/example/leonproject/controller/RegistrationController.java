@@ -23,7 +23,9 @@ public class RegistrationController {
 
     @PostMapping("/registration")
     public ResponseEntity<RegistrationResponseDTO> createUser(@RequestBody RegistrationDTO registrationDTO) {
+
         RegistrationResponseDTO registrationResponseDTO = registrationService.createUser(registrationDTO);
+
         if (registrationResponseDTO.getStatus() == 1) {
             return ResponseEntity.ok(registrationResponseDTO);
         } else {

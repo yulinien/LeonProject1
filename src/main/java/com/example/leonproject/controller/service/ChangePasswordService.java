@@ -14,13 +14,19 @@ public class ChangePasswordService {
     public ChangePasswordService(AccountRepository accountRepository) {
         this.accountRepository = accountRepository;
     }
-    public ChangePasswordResponseDTO changePassword(ChangePasswordDTO changePasswordDTO){
 
-        AccountDO accountDO = accountRepository.findAccountByUsernameAndPassword(changePasswordDTO.getUsername(), changePasswordDTO.getOldPassword())
+    public ChangePasswordResponseDTO changePassword(ChangePasswordDTO changePasswordDTO) {
+
+        AccountDO accountDO = accountRepository.findAccountByUsername(changePasswordDTO.getUsername())
                 .orElseThrow(() -> new RuntimeException("Account not found"));
+
+        if (!BCryptUtil.passwordCheck(changePasswordDTO.getOldPassword(), accountDO.getPassword())) {
+            return new ChangePasswordResponseDTO(-1, "old password incorrect");
+        }
+
         accountDO.setPassword(BCryptUtil.passwordEncode(changePasswordDTO.getNewPassword()));
         accountRepository.save(accountDO);
-        return new ChangePasswordResponseDTO(1,"ChangePassword Success");
+        return new ChangePasswordResponseDTO(1, "ChangePassword Success");
 
     }
 }

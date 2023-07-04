@@ -1,17 +1,14 @@
 package com.example.leonproject.controller.pojo;
 
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RegistrationDTO {
-
 
     @JsonProperty("username")
     private String username;
 
     @JsonProperty("password")
     private String password;
-
 
     public String getUsername() {
         return username;

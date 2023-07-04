@@ -5,18 +5,17 @@ import com.example.leonproject.dao.repository.AccountRepository;
 import com.example.leonproject.util.JWTUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
+import java.util.Optional;
 
 @Component
 public class JWTAuthenticationFilter extends OncePerRequestFilter {
@@ -25,15 +24,12 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
     private JWTUtil tokenGenerator;
 
     @Autowired
-    private CustomAccountDetailService customAccountDetailService;
-
-    @Autowired
     private AccountRepository accountRepository;
 
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
         String path = request.getRequestURI();
-        return !"/security/changePassword".equals(path);
+        return !"/LeonAPI/changePassword".equals(path);
     }
 
     @Override
@@ -43,10 +39,11 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
         System.out.println("有經過這");
         String token = getJWTFromRequest(request);
         String username = tokenGenerator.getUsernameFromJWT(token);
+        Optional<AccountDO> accountDO = accountRepository.findAccountByUsername(username);
         if (StringUtils.hasText(token) && tokenGenerator.validateToken(token)) {
-            UserDetails userDetails = customAccountDetailService.loadUserByUsername(username);
-            UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+            UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(accountDO, null, null);
             SecurityContextHolder.getContext().setAuthentication(authentication);
+
         } else {
             response.setContentType("application/json");
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);

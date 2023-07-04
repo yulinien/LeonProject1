@@ -4,17 +4,18 @@ package com.example.leonproject.dao.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="account")
+@Table(name = "account")
 public class AccountDO {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name = "id")
     private Integer id;
 
-    @Column(name="username")
+    @Column(name = "username")
     private String username;
 
-    @Column(name="password")
+    @Column(name = "password")
     private String password;
 
     public Integer getId() {

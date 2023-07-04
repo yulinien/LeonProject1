@@ -1,6 +1,5 @@
 package com.example.leonproject.util;
 
-
 import com.example.leonproject.config.SecurityConstants;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -12,7 +11,8 @@ import java.util.Date;
 
 @Component
 public class JWTUtil {
-    public  String generateToken(String username) {
+    public String generateToken(String username) {
+
         Date currentDate = new Date();
         Date expireDate = new Date(currentDate.getTime() + SecurityConstants.JWT_EXPIRATION);
 
@@ -25,6 +25,7 @@ public class JWTUtil {
     }
 
     public String getUsernameFromJWT(String token) {
+
         Claims claims = Jwts.parser()
                 .setSigningKey(SecurityConstants.JWT_SECRET)
                 .parseClaimsJws(token)

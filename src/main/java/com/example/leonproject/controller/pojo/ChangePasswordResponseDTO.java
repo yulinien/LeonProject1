@@ -1,6 +1,7 @@
 package com.example.leonproject.controller.pojo;
 
 public class ChangePasswordResponseDTO {
+
     private int status;
     private String errorMessage;
 

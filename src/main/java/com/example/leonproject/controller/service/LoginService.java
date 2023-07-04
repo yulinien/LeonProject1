@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class LoginService {
+
     private final AccountMapper accountMapper;
 
     public LoginService(AccountMapper accountMapper) {

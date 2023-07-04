@@ -22,50 +22,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ChangePasswordController {
-    private final JWTUtil jwtUtil;
-    private final ChangePasswordService changePasswordService;
-    private final AuthenticationManager authenticationManager;
 
-    public ChangePasswordController(AuthenticationManager authenticationManager,JWTUtil jwtUtil, ChangePasswordService changePasswordService) {
-        this.authenticationManager = authenticationManager;
-        this.jwtUtil = jwtUtil;
+    private final ChangePasswordService changePasswordService;
+
+    public ChangePasswordController(ChangePasswordService changePasswordService) {
         this.changePasswordService = changePasswordService;
     }
 
-//        @PostMapping("/security/login")//將整個三個API合而為一 JWT統一由security管理
-//    public ResponseEntity<?> login(@RequestBody ChangePasswordDTO changePasswordDTO) {
-//
-//        Authentication authentication = authenticationManager.authenticate(
-//                new UsernamePasswordAuthenticationToken(
-//                        changePasswordDTO.getUsername(),
-//                        changePasswordDTO.getOldPassword()));
-// ** notice      SecurityContextHolder.getContext().setAuthentication(authentication);
-//        String token = jwtUtil.generateToken(changePasswordDTO.getUsername());
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.add("Authorization", "Bearer " + token);
-//        return ResponseEntity.ok().headers(headers).body(new ChangePasswordResponseDTO(1, "Login Success checkout your headers"));
-//    }
-
-//    @PostMapping("/security/register")
-//    public ResponseEntity<?> register(@RequestBody ChangePasswordDTO changePasswordDTO) {
-//        if (accountRepository.existsByUsername(changePasswordDTO.getUsername())) {
-//            return new ResponseEntity<>("Username is taken!", HttpStatus.BAD_REQUEST);
-//        }
-//
-//        AccountDO accountDO = new AccountDO();
-//        accountDO.setUsername(changePasswordDTO.getUsername());
-//        accountDO.setPassword(passwordEncoder.encode(changePasswordDTO.getOldPassword()));
-//        accountRepository.save(accountDO);
-//
-//        return new ResponseEntity<>("User registered success!", HttpStatus.OK);
-//    }
-
     @Operation(security = {@SecurityRequirement(name = "JWT Token")})
-    @PostMapping("/security/changePassword")
+    @PostMapping("/changePassword")
     public ResponseEntity<ChangePasswordResponseDTO> changePassword(@RequestBody ChangePasswordDTO changePasswordDTO) {
-        ChangePasswordResponseDTO changePasswordResponseDTO = changePasswordService.changePassword(changePasswordDTO);
-        return ResponseEntity.ok().body(changePasswordResponseDTO);
 
+        ChangePasswordResponseDTO changePasswordResponseDTO = changePasswordService.changePassword(changePasswordDTO);
+
+        return ResponseEntity.ok().body(changePasswordResponseDTO);
     }
 }
 

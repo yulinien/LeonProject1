@@ -28,7 +28,9 @@ public class LoginController {
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponseDTO> userLogin(@RequestBody LoginDTO loginDTO) {
+
         LoginResponseDTO responseDTO = loginService.userLogin(loginDTO);
+
         if (responseDTO.getStatus() == -1) {
             return ResponseEntity.badRequest().body(responseDTO);
         } else {
