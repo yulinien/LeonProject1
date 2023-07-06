@@ -5,11 +5,15 @@ import com.example.leonproject.controller.pojo.RegistrationDTO;
 import com.example.leonproject.controller.pojo.RegistrationResponseDTO;
 import com.example.leonproject.controller.service.RegistrationService;
 import jakarta.annotation.security.PermitAll;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.LocaleResolver;
+
+import java.util.Locale;
 
 @PermitAll
 @RestController
@@ -22,9 +26,9 @@ public class RegistrationController {
     }
 
     @PostMapping("/registration")
-    public ResponseEntity<RegistrationResponseDTO> createUser(@RequestBody RegistrationDTO registrationDTO) {
-
-        RegistrationResponseDTO registrationResponseDTO = registrationService.createUser(registrationDTO);
+    public ResponseEntity<RegistrationResponseDTO> createUser(@RequestBody RegistrationDTO registrationDTO, HttpServletRequest httpServletRequest) {
+        
+        RegistrationResponseDTO registrationResponseDTO = registrationService.createUser(registrationDTO, httpServletRequest);
 
         if (registrationResponseDTO.getStatus() == 1) {
             return ResponseEntity.ok(registrationResponseDTO);

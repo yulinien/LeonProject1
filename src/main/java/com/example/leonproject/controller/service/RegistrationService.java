@@ -1,25 +1,41 @@
 package com.example.leonproject.controller.service;
 
 
+import com.example.leonproject.config.MyLocaleResolver;
 import com.example.leonproject.controller.pojo.RegistrationDTO;
 import com.example.leonproject.controller.pojo.RegistrationResponseDTO;
 import com.example.leonproject.dao.entity.AccountDO;
 import com.example.leonproject.dao.repository.AccountRepository;
 import com.example.leonproject.util.BCryptUtil;
+//import com.example.leonproject.config.MyLocaleResolver;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
+
+import java.util.Locale;
+
 
 @Service
 public class RegistrationService {
+
     private final AccountRepository accountRepository;
 
-    public RegistrationService(AccountRepository accountRepository) {
+    private final MessageSource messageSource;
+
+    private final MyLocaleResolver myLocaleResolver;
+
+    public RegistrationService(AccountRepository accountRepository, MessageSource messageSource, MyLocaleResolver myLocaleResolver) {
         this.accountRepository = accountRepository;
+        this.messageSource = messageSource;
+        this.myLocaleResolver = myLocaleResolver;
     }
 
-    public RegistrationResponseDTO createUser(RegistrationDTO registrationDTO) {
+    public RegistrationResponseDTO createUser(RegistrationDTO registrationDTO, HttpServletRequest httpServletRequest) {
 
         if (accountRepository.existsByUsername(registrationDTO.getUsername())) {
-            return new RegistrationResponseDTO(-1, "Username already existed");
+            Locale locale = myLocaleResolver.resolveLocale(httpServletRequest);
+            String errorMessage = messageSource.getMessage("error.usernameExists", null, locale);
+            return new RegistrationResponseDTO(-1, errorMessage);
         }
 
         String encodedPassword = BCryptUtil.passwordEncode(registrationDTO.getPassword());
