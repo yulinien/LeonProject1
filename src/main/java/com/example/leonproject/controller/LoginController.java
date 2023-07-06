@@ -31,12 +31,11 @@ public class LoginController {
 
         LoginResponseDTO responseDTO = loginService.userLogin(loginDTO);
 
-        if (responseDTO.getStatus() == -1) {
-            return ResponseEntity.badRequest().body(responseDTO);
-        } else {
-            HttpHeaders headers = new HttpHeaders();
-            headers.add("Authorization", "Bearer " + jwtUtil.generateToken(loginDTO.getUsername()));
-            return ResponseEntity.ok().headers(headers).body(new LoginResponseDTO(1, "Login Success"));
-        }
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", "Bearer " + jwtUtil.generateToken(loginDTO.getUsername()));
+
+        return ResponseEntity.ok().headers(headers).body(new LoginResponseDTO(1, "Login Success"));
+
     }
 }

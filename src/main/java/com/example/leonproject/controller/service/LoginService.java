@@ -4,6 +4,7 @@ import com.example.leonproject.controller.pojo.LoginDTO;
 import com.example.leonproject.controller.pojo.LoginResponseDTO;
 import com.example.leonproject.dao.entity.AccountDO;
 import com.example.leonproject.dao.mybatis.AccountMapper;
+import com.example.leonproject.exception.InputValidationException;
 import com.example.leonproject.util.BCryptUtil;
 import org.springframework.stereotype.Service;
 
@@ -17,8 +18,13 @@ public class LoginService {
     }
 
     public LoginResponseDTO userLogin(LoginDTO loginDTO) {
+
         if (loginDTO.getUsername() == null || loginDTO.getUsername().isEmpty()) {
-            return new LoginResponseDTO(-1, "please type the username");
+            throw new InputValidationException("帳號不能為空");
+        }
+
+        if (loginDTO.getPassword() == null || loginDTO.getPassword().isEmpty()) {
+            throw new InputValidationException("密碼不能為空");
         }
 
         AccountDO accountDO = accountMapper.getUser(loginDTO.getUsername());
