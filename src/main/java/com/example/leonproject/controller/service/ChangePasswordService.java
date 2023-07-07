@@ -4,6 +4,7 @@ import com.example.leonproject.controller.pojo.ChangePasswordDTO;
 import com.example.leonproject.controller.pojo.ChangePasswordResponseDTO;
 import com.example.leonproject.dao.entity.AccountDO;
 import com.example.leonproject.dao.repository.AccountRepository;
+import com.example.leonproject.exception.InputValidationException;
 import com.example.leonproject.util.BCryptUtil;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,7 @@ public class ChangePasswordService {
     public ChangePasswordResponseDTO changePassword(ChangePasswordDTO changePasswordDTO) {
 
         AccountDO accountDO = accountRepository.findAccountByUsername(changePasswordDTO.getUsername())
-                .orElseThrow(() -> new RuntimeException("Account not found"));
+                .orElseThrow(() -> new InputValidationException("Account not found"));
 
         if (!BCryptUtil.passwordCheck(changePasswordDTO.getOldPassword(), accountDO.getPassword())) {
             return new ChangePasswordResponseDTO(-1, "old password incorrect");

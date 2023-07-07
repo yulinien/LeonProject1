@@ -11,6 +11,5 @@ public class BCryptUtil {
 
     public static Boolean passwordCheck(String userInput, String password) {
         return BCrypt.checkpw(userInput, password);
-
     }
 }
