@@ -36,14 +36,16 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
-        System.out.println("有經過這");
+
         String token = getJWTFromRequest(request);
+
         String username = tokenGenerator.getUsernameFromJWT(token);
+
         Optional<AccountDO> accountDO = accountRepository.findAccountByUsername(username);
+
         if (StringUtils.hasText(token) && tokenGenerator.validateToken(token)) {
             UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(accountDO, null, null);
             SecurityContextHolder.getContext().setAuthentication(authentication);
-
         } else {
             response.setContentType("application/json");
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
@@ -52,7 +54,9 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
     }
 
     private String getJWTFromRequest(HttpServletRequest request) {
+
         String bearerToken = request.getHeader("Authorization");
+
         if (StringUtils.hasText(bearerToken) && bearerToken.startsWith("Bearer ")) {
             return bearerToken.substring(7, bearerToken.length());
         }
