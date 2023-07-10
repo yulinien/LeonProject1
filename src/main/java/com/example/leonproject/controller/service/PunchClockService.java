@@ -8,6 +8,7 @@ import com.example.leonproject.dao.repository.AccountRepository;
 import com.example.leonproject.dao.repository.PunchClockRepository;
 import com.example.leonproject.exception.InputValidationException;
 import com.example.leonproject.util.TimeDiffUtil;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -23,15 +24,14 @@ public class PunchClockService {
         this.punchClockRepository = punchClockRepository;
         this.accountRepository = accountRepository;
     }
-
+    @Transactional
     public PunchClockResponseDTO punchClock(PunchClockDTO punchClockDTO) {
 
         AccountDO accountDO = accountRepository.findAccountByUsername(punchClockDTO.getUsername())
                 .orElseThrow(() -> new InputValidationException("Account not found"));
 
-        PunchClockDO punchClockDO = punchClockRepository.findLatestRecordsForEachUser(punchClockDTO.getUsername())
+        PunchClockDO punchClockDO = punchClockRepository.findLatestRecordsForEachUser(accountDO.getId())
                 .orElse(null);
-
         //isPositiveTimeDiff
         if (punchClockDO == null || !(TimeDiffUtil.isSameDate(punchClockDO.getClockIn()))) {
             PunchClockDO newPunchClockDO = new PunchClockDO();
@@ -42,8 +42,6 @@ public class PunchClockService {
             punchClockDO.setClockOut(LocalDateTime.now());
             punchClockRepository.save(punchClockDO);
         }
-
         return new PunchClockResponseDTO(punchClockDTO.getUsername(), "打卡成功");
     }
-
 }

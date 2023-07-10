@@ -2,10 +2,12 @@ package com.example.leonproject.dao.entity;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
+import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Entity
-@Table(name = "punch_clock")
+@Table(name = "time_sheet")
 public class TimeSheetDO {
 
     @Id
@@ -14,10 +16,10 @@ public class TimeSheetDO {
     private Integer id;
 
     @Column(name = "work_date")
-    private LocalDateTime workDate;
+    private LocalDate workDate;
 
     @Column(name = "time_diff")
-    private LocalDateTime timeDiff;
+    private Time timeDiff;
 
     @ManyToOne
     @JoinColumn(name = "account_id")
@@ -31,19 +33,19 @@ public class TimeSheetDO {
         this.id = id;
     }
 
-    public LocalDateTime getWorkDate() {
+    public LocalDate getWorkDate() {
         return workDate;
     }
 
-    public void setWorkDate(LocalDateTime workDate) {
+    public void setWorkDate(LocalDate workDate) {
         this.workDate = workDate;
     }
 
-    public LocalDateTime getTimeDiff() {
+    public Time getTimeDiff() {
         return timeDiff;
     }
 
-    public void setTimeDiff(LocalDateTime timeDiff) {
+    public void setTimeDiff(Time timeDiff) {
         this.timeDiff = timeDiff;
     }
 

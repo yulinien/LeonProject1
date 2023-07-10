@@ -9,6 +9,6 @@ import java.util.Optional;
 public interface AccountRepository extends JpaRepository<AccountDO, Integer> {
 
     Boolean existsByUsername(String username);
-    
+
     Optional<AccountDO> findAccountByUsername(String username);
 }

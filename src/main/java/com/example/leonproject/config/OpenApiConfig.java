@@ -17,22 +17,22 @@ import io.swagger.v3.oas.annotations.servers.Server;
                         url = "xxxxxxxxxxxxx/xxxxxxx.com"
                 ),
                 description = "Test Swagger For Practice",
-                title = "Test LEON PROJECT API",
+                title = "LEON PROJECT API",
                 version = "1.1",
                 license = @License(
-                        name = "good license",
+                        name = "No license",
                         url = "xxxxxxxxxx/xxxxxxx.com"
                 ),
                 termsOfService = "Terms of service1"
         ),
         servers = {
                 @Server(
-                        description = "Local ENV",
-                        url = "http://localhost:8080/LeonAPI"
+                        description = "Dev ENV",
+                        url = "http://localhost:8080/LeonAPI/dev"
                 ),
                 @Server(
-                        description = "Product ENV",
-                        url = "https://test/i_dont_know.com"
+                        description = "Prod ENV",
+                        url = "http://localhost:8080/LeonAPI/prod"
                 )
         }
 )
