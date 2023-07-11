@@ -41,4 +41,15 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
     }
+
+    @ExceptionHandler(PunchClockFailException.class)
+    public ResponseEntity<ErrorResponse> handlePunchClockFailException(PunchClockFailException ex) {
+
+        String errorMessage = ex.getErrorMessage();
+
+        ErrorResponse errorResponse = new ErrorResponse(-1, errorMessage);
+
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
+    }
+
 }

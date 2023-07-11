@@ -29,6 +29,8 @@ public class SecurityConfig {
                         .requestMatchers("/registration",
                                 "/login",
                                 "/clock_in",
+                                "/fail_clock_in",
+                                "/fail_clock_in_transactional",
                                 "/swagger-resources",
                                 "/swagger-resources/**",
                                 "/v3/api-docs",

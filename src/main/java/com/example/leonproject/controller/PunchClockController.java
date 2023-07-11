@@ -27,4 +27,20 @@ public class PunchClockController {
 
         return ResponseEntity.ok().body(punchClockResponseDTO);
     }
+
+    @PostMapping("/fail_clock_in")
+    public ResponseEntity<PunchClockResponseDTO> failClockIn(@RequestBody PunchClockDTO punchClockDTO) {
+
+        PunchClockResponseDTO punchClockResponseDTO = punchClockService.failPunchClock(punchClockDTO);
+
+        return ResponseEntity.ok().body(punchClockResponseDTO);
+    }
+
+    @PostMapping("/fail_clock_in_transactional")
+    public ResponseEntity<PunchClockResponseDTO> failPunchClockTransactional(@RequestBody PunchClockDTO punchClockDTO) {
+
+        PunchClockResponseDTO punchClockResponseDTO = punchClockService.failPunchClockTransactional(punchClockDTO);
+
+        return ResponseEntity.ok().body(punchClockResponseDTO);
+    }
 }

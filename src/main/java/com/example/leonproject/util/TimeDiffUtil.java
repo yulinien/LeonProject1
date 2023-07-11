@@ -14,6 +14,7 @@ public class TimeDiffUtil {
 
     /**
      * 此方法是來計算每個user當日上下班打卡的時間差
+     * 並回傳成Time格式方便進入資料庫
      */
     public static Time calculateTimeDiff(LocalDateTime clockInTime, LocalDateTime clockOutTime) {
 
