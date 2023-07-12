@@ -1,0 +1,906 @@
+2023-07-11 15:10:38.162 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 5424 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 15:10:38.164 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 15:10:38.191 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 15:10:38.191 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 15:10:38.673 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 15:10:38.709 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2023-07-11 15:10:39.085 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 15:10:39.091 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 15:10:39.091 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 15:10:39.130 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 15:10:39.131 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 939 ms
+2023-07-11 15:10:39.190 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 15:10:39.361 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@108828bf
+2023-07-11 15:10:39.363 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 15:10:39.387 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 15:10:39.418 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 15:10:39.420 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 15:10:39.506 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 15:10:39.593 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 15:10:39.751 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 15:10:40.140 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 15:10:40.142 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 15:10:40.361 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 15:10:40.889 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@49edc32e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f706218, org.springframework.security.web.context.SecurityContextHolderFilter@570526fe, org.springframework.security.web.header.HeaderWriterFilter@79b8a607, org.springframework.web.filter.CorsFilter@411c9bfd, org.springframework.security.web.authentication.logout.LogoutFilter@346739bf, com.example.leonproject.config.JWTAuthenticationFilter@742d260, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f6d8b76, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d6c2d06, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29bb897f, org.springframework.security.web.session.SessionManagementFilter@429ca6b6, org.springframework.security.web.access.ExceptionTranslationFilter@3d788612, org.springframework.security.web.access.intercept.AuthorizationFilter@3823d318]
+2023-07-11 15:10:41.045 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 15:10:41.072 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 15:10:41.081 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.221 seconds (process running for 3.65)
+2023-07-11 15:10:41.187 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:15:10:41工時表更新成功
+2023-07-11 15:10:49.218 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 15:10:49.220 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 15:10:49.225 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 15:26:22.629 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 13300 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 15:26:22.631 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 15:26:22.657 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 15:26:22.658 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 15:26:23.136 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 15:26:23.173 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+2023-07-11 15:26:23.558 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 15:26:23.564 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 15:26:23.565 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 15:26:23.603 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 15:26:23.603 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 945 ms
+2023-07-11 15:26:23.662 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 15:26:23.832 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@148928ed
+2023-07-11 15:26:23.833 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 15:26:23.858 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 15:26:23.890 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 15:26:23.892 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 15:26:23.974 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 15:26:24.070 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 15:26:24.227 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 15:26:24.607 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 15:26:24.609 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 15:26:24.827 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 15:26:25.354 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4c378c68, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27750d06, org.springframework.security.web.context.SecurityContextHolderFilter@389ac88d, org.springframework.security.web.header.HeaderWriterFilter@6d682a13, org.springframework.web.filter.CorsFilter@4362d4df, org.springframework.security.web.authentication.logout.LogoutFilter@529dfd44, com.example.leonproject.config.JWTAuthenticationFilter@4d679614, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6109f154, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@30b0dede, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@33fef96c, org.springframework.security.web.session.SessionManagementFilter@4782a470, org.springframework.security.web.access.ExceptionTranslationFilter@4c77e82, org.springframework.security.web.access.intercept.AuthorizationFilter@70e37959]
+2023-07-11 15:26:25.509 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 15:26:25.539 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 15:26:25.548 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.219 seconds (process running for 3.692)
+2023-07-11 15:26:25.654 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:15:26:25工時表更新成功
+2023-07-11 15:26:27.049 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 15:26:27.051 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 15:26:27.055 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 15:26:29.873 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 16712 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 15:26:29.875 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 15:26:29.905 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 15:26:29.905 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 15:26:30.447 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 15:26:30.486 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+2023-07-11 15:26:30.896 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 15:26:30.903 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 15:26:30.903 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 15:26:30.943 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 15:26:30.943 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1037 ms
+2023-07-11 15:26:31.010 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 15:26:31.196 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35dd7dfa
+2023-07-11 15:26:31.198 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 15:26:31.223 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 15:26:31.257 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 15:26:31.259 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 15:26:31.350 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 15:26:31.449 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 15:26:31.611 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 15:26:32.023 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 15:26:32.025 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 15:26:32.267 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 15:26:32.847 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5b2ca655, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b057a3c, org.springframework.security.web.context.SecurityContextHolderFilter@f82d21c, org.springframework.security.web.header.HeaderWriterFilter@5e322384, org.springframework.web.filter.CorsFilter@3cef71, org.springframework.security.web.authentication.logout.LogoutFilter@7147f51, com.example.leonproject.config.JWTAuthenticationFilter@592f9922, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9bf6a3e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fedce81, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@9613ed5, org.springframework.security.web.session.SessionManagementFilter@70f98504, org.springframework.security.web.access.ExceptionTranslationFilter@7427430e, org.springframework.security.web.access.intercept.AuthorizationFilter@2cb98e12]
+2023-07-11 15:26:33.018 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 15:26:33.047 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 15:26:33.057 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.511 seconds (process running for 4.022)
+2023-07-11 15:26:33.174 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:15:26:33工時表更新成功
+2023-07-11 15:26:40.571 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 15:26:40.573 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 15:26:40.580 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 15:52:23.347 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 17048 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 15:52:23.349 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 15:52:23.375 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 15:52:23.375 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 15:52:23.884 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 15:52:23.925 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
+2023-07-11 15:52:24.315 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 15:52:24.321 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 15:52:24.322 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 15:52:24.363 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 15:52:24.364 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 988 ms
+2023-07-11 15:52:24.436 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 15:52:24.611 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a69d998
+2023-07-11 15:52:24.613 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 15:52:24.670 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 15:52:24.671 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 15:52:24.765 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 15:52:24.850 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 15:52:25.017 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 15:52:25.445 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 15:52:25.447 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 15:52:25.706 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 15:52:26.269 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@279a047f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b70f130, org.springframework.security.web.context.SecurityContextHolderFilter@750a7735, org.springframework.security.web.header.HeaderWriterFilter@1d271f62, org.springframework.web.filter.CorsFilter@2e9314db, org.springframework.security.web.authentication.logout.LogoutFilter@1bd05b22, com.example.leonproject.config.JWTAuthenticationFilter@376db354, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64c5101, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d906867, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ab59d67, org.springframework.security.web.session.SessionManagementFilter@336c44c3, org.springframework.security.web.access.ExceptionTranslationFilter@ab0922d, org.springframework.security.web.access.intercept.AuthorizationFilter@2df82fcb]
+2023-07-11 15:52:26.438 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 15:52:26.469 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 15:52:26.483 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.439 seconds (process running for 3.865)
+2023-07-11 15:52:26.504 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 15:52:26.507 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 15:52:26.512 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 15:52:29.977 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 20580 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 15:52:29.979 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 15:52:30.009 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 15:52:30.010 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 15:52:30.576 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 15:52:30.615 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2023-07-11 15:52:31.051 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 15:52:31.057 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 15:52:31.058 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 15:52:31.102 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 15:52:31.102 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1092 ms
+2023-07-11 15:52:31.184 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 15:52:31.376 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67aae4b
+2023-07-11 15:52:31.377 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 15:52:31.442 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 15:52:31.444 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 15:52:31.543 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 15:52:31.643 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 15:52:31.822 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 15:52:32.263 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 15:52:32.265 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 15:52:32.525 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 15:52:33.166 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@686d1714, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f9f0546, org.springframework.security.web.context.SecurityContextHolderFilter@2a6f8a9e, org.springframework.security.web.header.HeaderWriterFilter@714dba4e, org.springframework.web.filter.CorsFilter@54b5c83e, org.springframework.security.web.authentication.logout.LogoutFilter@155920f5, com.example.leonproject.config.JWTAuthenticationFilter@32c2e359, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f5d6474, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2690af84, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f181010, org.springframework.security.web.session.SessionManagementFilter@23c08411, org.springframework.security.web.access.ExceptionTranslationFilter@13d02c4c, org.springframework.security.web.access.intercept.AuthorizationFilter@35f45225]
+2023-07-11 15:52:33.380 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 15:52:33.412 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 15:52:33.427 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.779 seconds (process running for 4.27)
+2023-07-11 15:52:33.564 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:15:52:33工時表更新成功
+2023-07-11 15:52:38.037 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 15:52:38.039 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 15:52:38.045 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:03:20.699 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 9620 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:03:20.701 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:03:20.727 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:03:20.727 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:03:21.207 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:03:21.242 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:03:21.642 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:03:21.648 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:03:21.649 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:03:21.688 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:03:21.688 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 960 ms
+2023-07-11 17:03:21.749 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:03:21.925 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3100f48a
+2023-07-11 17:03:21.926 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:03:21.951 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:03:21.982 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:03:21.984 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:03:22.070 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:03:22.157 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:03:22.310 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:03:22.690 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:03:22.692 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:03:22.913 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:03:23.444 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@43e67b35, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@171f8892, org.springframework.security.web.context.SecurityContextHolderFilter@2bdfcaf0, org.springframework.security.web.header.HeaderWriterFilter@29bb897f, org.springframework.web.filter.CorsFilter@aa0b1ab, org.springframework.security.web.authentication.logout.LogoutFilter@70e37959, com.example.leonproject.config.JWTAuthenticationFilter@7da18b9d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@200a0e56, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b81e5ce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3edf39b3, org.springframework.security.web.session.SessionManagementFilter@30b0dede, org.springframework.security.web.access.ExceptionTranslationFilter@6f706218, org.springframework.security.web.access.intercept.AuthorizationFilter@19d9ae9d]
+2023-07-11 17:03:23.597 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:03:23.624 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:03:23.634 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.237 seconds (process running for 3.666)
+2023-07-11 17:03:23.737 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:03:23工時表更新成功
+2023-07-11 17:03:33.755 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:03:33工時表更新成功
+2023-07-11 17:03:43.770 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:03:43工時表更新成功
+2023-07-11 17:03:47.891 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:03:47.893 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:03:47.897 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:05:16.191 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 19364 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:05:16.193 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:05:16.220 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:05:16.220 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:05:16.713 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:05:16.750 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:05:17.136 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:05:17.143 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:05:17.143 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:05:17.181 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:05:17.182 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 962 ms
+2023-07-11 17:05:17.242 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:05:17.434 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30f9c415
+2023-07-11 17:05:17.435 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:05:17.461 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:05:17.492 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:05:17.494 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:05:17.579 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:05:17.670 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:05:17.828 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:05:18.226 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:05:18.228 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:05:18.454 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:05:19.000 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1dafa77b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@200a0e56, org.springframework.security.web.context.SecurityContextHolderFilter@1e2a74ea, org.springframework.security.web.header.HeaderWriterFilter@3203d001, org.springframework.web.filter.CorsFilter@1ea00552, org.springframework.security.web.authentication.logout.LogoutFilter@32872d8e, com.example.leonproject.config.JWTAuthenticationFilter@5fafb56d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72fe5d91, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4e2944a0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4bfdc43c, org.springframework.security.web.session.SessionManagementFilter@243988b5, org.springframework.security.web.access.ExceptionTranslationFilter@f6d8b76, org.springframework.security.web.access.intercept.AuthorizationFilter@7209e22a]
+2023-07-11 17:05:19.164 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:05:19.193 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:05:19.204 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.327 seconds (process running for 3.764)
+2023-07-11 17:05:19.319 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:05:19工時表更新成功
+2023-07-11 17:05:24.338 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:05:24.338 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:05:24.339 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 17:05:29.336 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:05:29工時表更新成功
+2023-07-11 17:05:30.626 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:05:30.628 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:05:30.633 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:06:32.903 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 22452 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:06:32.905 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:06:32.932 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:06:32.933 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:06:33.424 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:06:33.461 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:06:33.852 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:06:33.858 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:06:33.859 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:06:33.897 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:06:33.898 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 964 ms
+2023-07-11 17:06:33.958 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:06:34.129 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@449099dd
+2023-07-11 17:06:34.131 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:06:34.155 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:06:34.187 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:06:34.189 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:06:34.274 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:06:34.363 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:06:34.518 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:06:34.898 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:06:34.900 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:06:35.123 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:06:35.647 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@200a0e56, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ea00552, org.springframework.security.web.context.SecurityContextHolderFilter@76be3bba, org.springframework.security.web.header.HeaderWriterFilter@1e39338c, org.springframework.web.filter.CorsFilter@4bfdc43c, org.springframework.security.web.authentication.logout.LogoutFilter@7af96e68, com.example.leonproject.config.JWTAuthenticationFilter@5fafb56d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41fa204, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@375fc0e3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b093647, org.springframework.security.web.session.SessionManagementFilter@1122acd0, org.springframework.security.web.access.ExceptionTranslationFilter@4ccf2db0, org.springframework.security.web.access.intercept.AuthorizationFilter@5dcc7b0e]
+2023-07-11 17:06:35.808 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:06:35.835 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:06:35.845 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.257 seconds (process running for 3.685)
+2023-07-11 17:06:35.949 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:06:35工時表更新成功
+2023-07-11 17:06:45.972 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:06:45工時表更新成功
+2023-07-11 17:06:55.997 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:06:55工時表更新成功
+2023-07-11 17:07:06.009 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:07:06工時表更新成功
+2023-07-11 17:07:08.637 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:07:08.637 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:07:08.638 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 17:07:16.028 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:07:16工時表更新成功
+2023-07-11 17:07:26.041 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:07:26工時表更新成功
+2023-07-11 17:07:29.966 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:07:29.968 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:07:29.972 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:15:33.621 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 17280 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:15:33.622 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:15:33.649 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:15:33.650 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:15:34.136 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:15:34.175 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:15:34.551 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:15:34.558 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:15:34.558 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:15:34.596 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:15:34.596 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 946 ms
+2023-07-11 17:15:34.656 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:15:34.829 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30f9c415
+2023-07-11 17:15:34.831 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:15:34.856 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:15:34.889 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:15:34.891 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:15:34.977 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:15:35.065 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:15:35.226 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:15:35.613 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:15:35.616 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:15:35.841 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:15:36.379 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4362d4df, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33fef96c, org.springframework.security.web.context.SecurityContextHolderFilter@6109f154, org.springframework.security.web.header.HeaderWriterFilter@5bab2402, org.springframework.web.filter.CorsFilter@43da67b7, org.springframework.security.web.authentication.logout.LogoutFilter@4a2ec578, com.example.leonproject.config.JWTAuthenticationFilter@5fafb56d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e822d08, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5dcc7b0e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4cc84ff7, org.springframework.security.web.session.SessionManagementFilter@7af96e68, org.springframework.security.web.access.ExceptionTranslationFilter@6d682a13, org.springframework.security.web.access.intercept.AuthorizationFilter@73206986]
+2023-07-11 17:15:36.532 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:15:36.559 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:15:36.569 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.25 seconds (process running for 3.676)
+2023-07-11 17:15:36.676 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:15:36工時表更新成功
+2023-07-11 17:15:41.492 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:15:41.492 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:15:41.493 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-07-11 17:15:46.695 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:15:46工時表更新成功
+2023-07-11 17:15:53.394 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:15:53.396 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:15:53.401 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:18:46.240 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 22688 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:18:46.241 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:18:46.269 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:18:46.270 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:18:46.757 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:18:46.794 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:18:47.177 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:18:47.183 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:18:47.183 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:18:47.221 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:18:47.222 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 952 ms
+2023-07-11 17:18:47.281 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:18:47.452 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@449099dd
+2023-07-11 17:18:47.454 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:18:47.478 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:18:47.510 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:18:47.512 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:18:47.596 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:18:47.683 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:18:47.839 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:18:48.221 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:18:48.223 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:18:48.444 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:18:48.968 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33fef96c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43da67b7, org.springframework.security.web.context.SecurityContextHolderFilter@50b24933, org.springframework.security.web.header.HeaderWriterFilter@3823d318, org.springframework.web.filter.CorsFilter@4cc84ff7, org.springframework.security.web.authentication.logout.LogoutFilter@799060b9, com.example.leonproject.config.JWTAuthenticationFilter@5fafb56d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e9d0f08, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2bdfcaf0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19d9ae9d, org.springframework.security.web.session.SessionManagementFilter@389ac88d, org.springframework.security.web.access.ExceptionTranslationFilter@6427656a, org.springframework.security.web.access.intercept.AuthorizationFilter@4c378c68]
+2023-07-11 17:18:49.121 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:18:49.151 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:18:49.160 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.234 seconds (process running for 3.672)
+2023-07-11 17:18:49.263 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:18:49工時表更新成功
+2023-07-11 17:18:50.009 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:18:50.009 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:18:50.010 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 17:18:58.521 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:18:58.523 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:18:58.527 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:21:51.255 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 23100 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:21:51.256 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:21:51.283 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:21:51.284 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:21:51.781 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:21:51.818 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:21:52.210 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:21:52.216 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:21:52.217 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:21:52.255 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:21:52.255 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 971 ms
+2023-07-11 17:21:52.314 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:21:52.496 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3100f48a
+2023-07-11 17:21:52.497 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:21:52.524 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:21:52.560 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:21:52.562 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:21:52.651 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:21:52.741 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:21:52.891 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:21:53.273 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:21:53.275 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:21:53.492 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:21:54.042 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@60ec01c3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b5b897, org.springframework.security.web.context.SecurityContextHolderFilter@375fc0e3, org.springframework.security.web.header.HeaderWriterFilter@3eb98496, org.springframework.web.filter.CorsFilter@564e929a, org.springframework.security.web.authentication.logout.LogoutFilter@1e9d0f08, com.example.leonproject.config.JWTAuthenticationFilter@7da18b9d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@141368ee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8e49c12, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3c3a2f13, org.springframework.security.web.session.SessionManagementFilter@495f1b49, org.springframework.security.web.access.ExceptionTranslationFilter@33269525, org.springframework.security.web.access.intercept.AuthorizationFilter@2b093647]
+2023-07-11 17:21:54.199 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:21:54.226 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:21:54.235 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.28 seconds (process running for 3.703)
+2023-07-11 17:21:54.352 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:21:54工時表更新成功
+2023-07-11 17:21:56.329 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:21:56.330 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:21:56.331 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 17:22:04.375 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:22:04工時表更新成功
+2023-07-11 17:22:14.395 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:22:14工時表更新成功
+2023-07-11 17:22:24.411 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:22:24工時表更新成功
+2023-07-11 17:22:34.427 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:22:34工時表更新成功
+2023-07-11 17:22:44.442 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:22:44工時表更新成功
+2023-07-11 17:22:54.459 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:22:54工時表更新成功
+2023-07-11 17:23:04.474 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:23:04工時表更新成功
+2023-07-11 17:23:14.488 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:23:14工時表更新成功
+2023-07-11 17:23:24.508 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:23:24工時表更新成功
+2023-07-11 17:23:32.347 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:23:32.349 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:23:32.353 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:24:30.481 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 8888 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:24:30.483 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:24:30.510 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:24:30.511 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:24:30.997 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:24:31.036 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:24:31.422 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:24:31.428 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:24:31.428 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:24:31.466 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:24:31.466 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 955 ms
+2023-07-11 17:24:31.526 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:24:31.709 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@449099dd
+2023-07-11 17:24:31.710 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:24:31.735 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:24:31.767 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:24:31.769 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:24:31.854 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:24:31.942 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:24:32.095 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:24:32.476 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:24:32.478 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:24:32.701 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:24:33.248 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33fef96c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43da67b7, org.springframework.security.web.context.SecurityContextHolderFilter@50b24933, org.springframework.security.web.header.HeaderWriterFilter@3823d318, org.springframework.web.filter.CorsFilter@4cc84ff7, org.springframework.security.web.authentication.logout.LogoutFilter@799060b9, com.example.leonproject.config.JWTAuthenticationFilter@5fafb56d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e9d0f08, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2bdfcaf0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19d9ae9d, org.springframework.security.web.session.SessionManagementFilter@389ac88d, org.springframework.security.web.access.ExceptionTranslationFilter@6427656a, org.springframework.security.web.access.intercept.AuthorizationFilter@4c378c68]
+2023-07-11 17:24:33.403 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:24:33.431 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:24:33.440 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.271 seconds (process running for 3.706)
+2023-07-11 17:24:33.557 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:24:33工時表更新成功
+2023-07-11 17:24:34.755 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:24:34.755 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:24:34.756 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 17:24:43.571 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:24:43工時表更新成功
+2023-07-11 17:24:53.589 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:24:53工時表更新成功
+2023-07-11 17:25:03.609 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:25:03工時表更新成功
+2023-07-11 17:25:06.036 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:25:06.038 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:25:06.042 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:25:09.041 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 23404 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:25:09.043 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:25:09.070 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:25:09.070 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:25:09.565 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:25:09.601 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:25:10.002 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:25:10.008 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:25:10.009 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:25:10.046 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:25:10.047 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 976 ms
+2023-07-11 17:25:10.106 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:25:10.278 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a94454c
+2023-07-11 17:25:10.279 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:25:10.310 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:25:10.345 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:25:10.347 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:25:10.440 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:25:10.536 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:25:10.694 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:25:11.079 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:25:11.081 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:25:11.295 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:25:11.838 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@70e37959, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5bc7f689, org.springframework.security.web.context.SecurityContextHolderFilter@4782a470, org.springframework.security.web.header.HeaderWriterFilter@9e014c0, org.springframework.web.filter.CorsFilter@73206986, org.springframework.security.web.authentication.logout.LogoutFilter@31936599, com.example.leonproject.config.JWTAuthenticationFilter@23adae03, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7af96e68, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50b24933, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c378c68, org.springframework.security.web.session.SessionManagementFilter@29bb897f, org.springframework.security.web.access.ExceptionTranslationFilter@18cf272d, org.springframework.security.web.access.intercept.AuthorizationFilter@47fd9e42]
+2023-07-11 17:25:11.992 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:25:12.020 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:25:12.029 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.291 seconds (process running for 3.716)
+2023-07-11 17:25:12.135 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:25:12工時表更新成功
+2023-07-11 17:25:13.590 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:25:13.591 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:25:13.592 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 17:25:17.011 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:25:17.013 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:25:17.017 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:26:13.853 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 22716 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:26:13.853 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:26:13.880 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:26:13.881 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:26:14.369 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:26:14.403 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:26:14.794 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:26:14.800 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:26:14.800 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:26:14.839 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:26:14.839 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 958 ms
+2023-07-11 17:26:14.898 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:26:15.076 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@326a23b1
+2023-07-11 17:26:15.077 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:26:15.102 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:26:15.134 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:26:15.136 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:26:15.233 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:26:15.323 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:26:15.484 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:26:15.889 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:26:15.891 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:26:16.104 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:26:16.650 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3c9bcd22, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69ade176, org.springframework.security.web.context.SecurityContextHolderFilter@fec8fd8, org.springframework.security.web.header.HeaderWriterFilter@642f8b9f, org.springframework.web.filter.CorsFilter@5601506d, org.springframework.security.web.authentication.logout.LogoutFilter@67057a4c, com.example.leonproject.config.JWTAuthenticationFilter@6e98dbf6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4370d465, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4922d6f3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4be9a355, org.springframework.security.web.session.SessionManagementFilter@26b3ac39, org.springframework.security.web.access.ExceptionTranslationFilter@41ff9707, org.springframework.security.web.access.intercept.AuthorizationFilter@6867a09f]
+2023-07-11 17:26:16.810 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:26:16.837 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:26:16.847 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.299 seconds (process running for 3.728)
+2023-07-11 17:26:16.952 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:26:16工時表更新成功
+2023-07-11 17:26:19.069 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:26:19.069 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:26:19.070 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 17:26:22.867 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:26:22.869 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:26:22.873 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:26:24.854 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 3952 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:26:24.855 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:26:24.885 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:26:24.886 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:26:25.475 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:26:25.523 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:26:25.944 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:26:25.950 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:26:25.951 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:26:25.995 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:26:25.995 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1109 ms
+2023-07-11 17:26:26.059 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:26:26.242 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e8e5cbb
+2023-07-11 17:26:26.244 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:26:26.269 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:26:26.302 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:26:26.304 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:26:26.393 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:26:26.492 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:26:26.658 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:26:27.073 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:26:27.076 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:26:27.319 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:26:27.917 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@303a90e0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8de665c, org.springframework.security.web.context.SecurityContextHolderFilter@55b891ef, org.springframework.security.web.header.HeaderWriterFilter@aa6a70d, org.springframework.web.filter.CorsFilter@42945c9d, org.springframework.security.web.authentication.logout.LogoutFilter@6be6348d, com.example.leonproject.config.JWTAuthenticationFilter@1b9591a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fec74c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d582a49, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a0a0cea, org.springframework.security.web.session.SessionManagementFilter@566f426f, org.springframework.security.web.access.ExceptionTranslationFilter@3048f86d, org.springframework.security.web.access.intercept.AuthorizationFilter@78f80487]
+2023-07-11 17:26:28.103 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:26:28.132 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:26:28.143 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.621 seconds (process running for 4.154)
+2023-07-11 17:26:28.261 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:26:28工時表更新成功
+2023-07-11 17:26:29.087 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:26:29.087 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:26:29.088 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 17:27:10.533 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:27:10工時表更新成功
+2023-07-11 17:27:13.197 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:27:13.199 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:27:13.206 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:27:15.296 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 3352 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:27:15.298 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:27:15.328 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:27:15.328 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:27:15.869 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:27:15.907 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:27:16.317 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:27:16.324 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:27:16.324 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:27:16.368 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:27:16.368 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1039 ms
+2023-07-11 17:27:16.432 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:27:16.618 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e8e5cbb
+2023-07-11 17:27:16.620 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:27:16.646 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:27:16.679 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:27:16.681 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:27:16.774 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:27:16.871 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:27:17.071 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:27:17.486 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:27:17.488 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:27:17.737 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:27:18.340 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@303a90e0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8de665c, org.springframework.security.web.context.SecurityContextHolderFilter@55b891ef, org.springframework.security.web.header.HeaderWriterFilter@aa6a70d, org.springframework.web.filter.CorsFilter@42945c9d, org.springframework.security.web.authentication.logout.LogoutFilter@6be6348d, com.example.leonproject.config.JWTAuthenticationFilter@1b9591a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fec74c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d582a49, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a0a0cea, org.springframework.security.web.session.SessionManagementFilter@566f426f, org.springframework.security.web.access.ExceptionTranslationFilter@3048f86d, org.springframework.security.web.access.intercept.AuthorizationFilter@78f80487]
+2023-07-11 17:27:18.521 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:27:18.550 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:27:18.561 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.592 seconds (process running for 4.132)
+2023-07-11 17:27:18.678 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:27:18工時表更新成功
+2023-07-11 17:27:26.898 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:27:26.898 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:27:26.900 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 17:28:25.884 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:28:25工時表更新成功
+2023-07-11 17:28:25.972 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:28:25.974 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:28:25.980 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:29:06.387 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 11568 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:29:06.388 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:29:06.416 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:29:06.417 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:29:06.903 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:29:06.941 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:29:07.324 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:29:07.330 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:29:07.330 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:29:07.368 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:29:07.368 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 951 ms
+2023-07-11 17:29:07.427 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:29:07.597 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30f9c415
+2023-07-11 17:29:07.598 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:29:07.622 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:29:07.654 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:29:07.657 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:29:07.741 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:29:07.830 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:29:07.982 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:29:08.387 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:29:08.389 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:29:08.620 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:29:09.180 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19d9ae9d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d281153, org.springframework.security.web.context.SecurityContextHolderFilter@30b0dede, org.springframework.security.web.header.HeaderWriterFilter@49edc32e, org.springframework.web.filter.CorsFilter@4d5f229e, org.springframework.security.web.authentication.logout.LogoutFilter@47fd9e42, com.example.leonproject.config.JWTAuthenticationFilter@5fafb56d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5dcc7b0e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ea00552, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43e67b35, org.springframework.security.web.session.SessionManagementFilter@50b24933, org.springframework.security.web.access.ExceptionTranslationFilter@14b75ebd, org.springframework.security.web.access.intercept.AuthorizationFilter@33fef96c]
+2023-07-11 17:29:09.364 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:29:09.395 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:29:09.406 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.324 seconds (process running for 3.747)
+2023-07-11 17:29:09.526 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:29:09工時表更新成功
+2023-07-11 17:29:11.034 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:29:11.035 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:29:11.036 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 17:29:19.542 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:29:19工時表更新成功
+2023-07-11 17:29:21.826 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:29:21.828 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:29:21.833 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:32:03.258 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 15928 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:32:03.259 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:32:03.288 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:32:03.288 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:32:03.785 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:32:03.824 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:32:04.214 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:32:04.220 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:32:04.220 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:32:04.258 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:32:04.259 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 971 ms
+2023-07-11 17:32:04.321 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:32:04.521 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@326a23b1
+2023-07-11 17:32:04.522 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:32:04.547 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:32:04.578 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:32:04.580 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:32:04.666 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:32:04.759 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:32:04.936 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:32:05.327 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:32:05.329 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:32:05.555 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:32:06.092 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@34ff754a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54d22688, org.springframework.security.web.context.SecurityContextHolderFilter@3a7ccc83, org.springframework.security.web.header.HeaderWriterFilter@6cf1d3ca, org.springframework.web.filter.CorsFilter@35c5e8c0, org.springframework.security.web.authentication.logout.LogoutFilter@7144ddc4, com.example.leonproject.config.JWTAuthenticationFilter@6e98dbf6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26010cfe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46af3791, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@620add6, org.springframework.security.web.session.SessionManagementFilter@70e88955, org.springframework.security.web.access.ExceptionTranslationFilter@2cae49b5, org.springframework.security.web.access.intercept.AuthorizationFilter@19cf3045]
+2023-07-11 17:32:06.255 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:32:06.282 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:32:06.292 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.337 seconds (process running for 3.803)
+2023-07-11 17:32:06.403 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:32:06工時表更新成功
+2023-07-11 17:32:10.907 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:32:10.907 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:32:10.908 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-07-11 17:32:16.431 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:32:16工時表更新成功
+2023-07-11 17:32:26.443 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:32:26工時表更新成功
+2023-07-11 17:32:26.841 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:32:26.843 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:32:26.848 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:32:38.204 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 20960 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:32:38.206 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:32:38.233 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:32:38.233 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:32:38.725 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:32:38.762 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:32:39.148 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:32:39.154 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:32:39.154 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:32:39.193 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:32:39.193 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 959 ms
+2023-07-11 17:32:39.254 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:32:39.425 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30f9c415
+2023-07-11 17:32:39.426 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:32:39.450 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:32:39.482 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:32:39.484 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:32:39.568 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:32:39.654 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:32:39.812 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:32:40.199 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:32:40.201 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:32:40.440 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:32:40.989 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19d9ae9d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d281153, org.springframework.security.web.context.SecurityContextHolderFilter@30b0dede, org.springframework.security.web.header.HeaderWriterFilter@49edc32e, org.springframework.web.filter.CorsFilter@4d5f229e, org.springframework.security.web.authentication.logout.LogoutFilter@47fd9e42, com.example.leonproject.config.JWTAuthenticationFilter@5fafb56d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5dcc7b0e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ea00552, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43e67b35, org.springframework.security.web.session.SessionManagementFilter@50b24933, org.springframework.security.web.access.ExceptionTranslationFilter@14b75ebd, org.springframework.security.web.access.intercept.AuthorizationFilter@33fef96c]
+2023-07-11 17:32:41.138 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:32:41.165 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:32:41.175 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.289 seconds (process running for 3.718)
+2023-07-11 17:32:41.284 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:32:41工時表更新成功
+2023-07-11 17:32:44.313 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:32:44.313 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:32:44.314 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 17:32:51.312 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:32:51工時表更新成功
+2023-07-11 17:33:01.328 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:33:01工時表更新成功
+2023-07-11 17:33:06.491 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:33:06.493 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:33:06.498 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:33:13.032 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 3388 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:33:13.033 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:33:13.060 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:33:13.061 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:33:13.555 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:33:13.598 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:33:14.001 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:33:14.006 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:33:14.007 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:33:14.046 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:33:14.046 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 985 ms
+2023-07-11 17:33:14.105 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:33:14.276 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19f01086
+2023-07-11 17:33:14.278 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:33:14.302 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:33:14.336 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:33:14.338 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:33:14.421 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:33:14.508 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:33:14.666 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:33:15.046 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:33:15.048 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:33:15.269 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:33:15.797 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6109f154, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50b24933, org.springframework.security.web.context.SecurityContextHolderFilter@3eb98496, org.springframework.security.web.header.HeaderWriterFilter@9551ce5, org.springframework.web.filter.CorsFilter@3e822d08, org.springframework.security.web.authentication.logout.LogoutFilter@4b647574, com.example.leonproject.config.JWTAuthenticationFilter@31afabc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e596eec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1122acd0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1e9d0f08, org.springframework.security.web.session.SessionManagementFilter@64d46f60, org.springframework.security.web.access.ExceptionTranslationFilter@49e93249, org.springframework.security.web.access.intercept.AuthorizationFilter@7af96e68]
+2023-07-11 17:33:15.953 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:33:15.979 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:33:15.989 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.263 seconds (process running for 3.685)
+2023-07-11 17:33:16.094 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:33:16工時表更新成功
+2023-07-11 17:33:16.550 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:33:16.550 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:33:16.551 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 17:33:26.113 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:33:26工時表更新成功
+2023-07-11 17:33:36.128 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:33:36工時表更新成功
+2023-07-11 17:33:46.152 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:33:46工時表更新成功
+2023-07-11 17:33:56.164 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:33:56工時表更新成功
+2023-07-11 17:34:06.189 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:34:06工時表更新成功
+2023-07-11 17:34:16.206 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:34:16工時表更新成功
+2023-07-11 17:34:26.229 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:34:26工時表更新成功
+2023-07-11 17:34:30.018 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:34:30.020 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:34:30.024 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:40:46.775 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 9252 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:40:46.777 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:40:46.804 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:40:46.804 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:40:47.292 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:40:47.329 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:40:47.717 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:40:47.724 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:40:47.725 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:40:47.766 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:40:47.767 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 963 ms
+2023-07-11 17:40:47.828 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:40:48.003 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@449099dd
+2023-07-11 17:40:48.005 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:40:48.029 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:40:48.060 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:40:48.062 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:40:48.145 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:40:48.234 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:40:48.402 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:40:48.785 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:40:48.787 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:40:49.015 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:40:49.547 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d281153, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d5f229e, org.springframework.security.web.context.SecurityContextHolderFilter@7209e22a, org.springframework.security.web.header.HeaderWriterFilter@6f706218, org.springframework.web.filter.CorsFilter@43e67b35, org.springframework.security.web.authentication.logout.LogoutFilter@3d92bbac, com.example.leonproject.config.JWTAuthenticationFilter@5fafb56d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bdfcaf0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4bfdc43c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@171f8892, org.springframework.security.web.session.SessionManagementFilter@3e822d08, org.springframework.security.web.access.ExceptionTranslationFilter@4b647574, org.springframework.security.web.access.intercept.AuthorizationFilter@43da67b7]
+2023-07-11 17:40:49.704 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:40:49.741 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:40:49.751 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.275 seconds (process running for 3.702)
+2023-07-11 17:40:49.858 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:40:49工時表更新成功
+2023-07-11 17:40:52.764 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:40:52.765 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:40:52.766 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 17:40:55.873 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:40:55.875 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:40:55.879 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 17:43:16.934 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 23248 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 17:43:16.936 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 17:43:16.963 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 17:43:16.963 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 17:43:17.446 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 17:43:17.481 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.
+2023-07-11 17:43:17.866 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 17:43:17.872 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 17:43:17.873 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 17:43:17.912 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 17:43:17.913 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 949 ms
+2023-07-11 17:43:17.973 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 17:43:18.151 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@449099dd
+2023-07-11 17:43:18.152 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 17:43:18.178 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 17:43:18.211 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 17:43:18.213 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 17:43:18.299 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:43:18.391 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 17:43:18.559 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 17:43:18.942 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 17:43:18.944 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:43:19.165 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 17:43:19.711 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@200a0e56, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1ea00552, org.springframework.security.web.context.SecurityContextHolderFilter@76be3bba, org.springframework.security.web.header.HeaderWriterFilter@1e39338c, org.springframework.web.filter.CorsFilter@4bfdc43c, org.springframework.security.web.authentication.logout.LogoutFilter@7af96e68, com.example.leonproject.config.JWTAuthenticationFilter@5fafb56d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41fa204, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@375fc0e3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b093647, org.springframework.security.web.session.SessionManagementFilter@1122acd0, org.springframework.security.web.access.ExceptionTranslationFilter@4ccf2db0, org.springframework.security.web.access.intercept.AuthorizationFilter@5dcc7b0e]
+2023-07-11 17:43:19.869 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 17:43:19.899 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 17:43:19.910 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.275 seconds (process running for 3.701)
+2023-07-11 17:43:20.011 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:43:20工時表更新成功
+2023-07-11 17:43:24.381 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 17:43:24.381 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 17:43:24.382 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 17:43:30.027 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:43:30工時表更新成功
+2023-07-11 17:43:40.047 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:17:43:40工時表更新成功
+2023-07-11 17:43:43.090 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 17:43:43.092 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 17:43:43.097 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 18:02:33.914 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 21108 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 18:02:33.916 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 18:02:33.944 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 18:02:33.944 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 18:02:34.443 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 18:02:34.477 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.
+2023-07-11 18:02:34.855 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 18:02:34.861 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 18:02:34.861 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 18:02:34.899 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 18:02:34.900 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 955 ms
+2023-07-11 18:02:34.959 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 18:02:35.128 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@437ed361
+2023-07-11 18:02:35.130 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 18:02:35.155 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 18:02:35.188 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 18:02:35.190 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 18:02:35.275 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 18:02:35.359 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 18:02:35.515 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 18:02:35.897 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 18:02:35.899 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 18:02:36.111 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 18:02:36.647 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19d9ae9d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d281153, org.springframework.security.web.context.SecurityContextHolderFilter@30b0dede, org.springframework.security.web.header.HeaderWriterFilter@49edc32e, org.springframework.web.filter.CorsFilter@4d5f229e, org.springframework.security.web.authentication.logout.LogoutFilter@47fd9e42, com.example.leonproject.config.JWTAuthenticationFilter@18c26372, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5dcc7b0e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ea00552, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43e67b35, org.springframework.security.web.session.SessionManagementFilter@50b24933, org.springframework.security.web.access.ExceptionTranslationFilter@14b75ebd, org.springframework.security.web.access.intercept.AuthorizationFilter@33fef96c]
+2023-07-11 18:02:36.798 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 18:02:36.825 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 18:02:36.834 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.219 seconds (process running for 3.677)
+2023-07-11 18:02:36.936 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:18:02:36工時表更新成功
+2023-07-11 18:02:38.611 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 18:02:38.613 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 18:02:38.617 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 18:16:37.300 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 5196 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 18:16:37.301 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 18:16:37.329 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 18:16:37.329 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 18:16:37.812 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 18:16:37.849 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2023-07-11 18:16:38.320 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 18:16:38.326 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 18:16:38.326 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 18:16:38.364 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 18:16:38.364 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1034 ms
+2023-07-11 18:16:38.443 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 18:16:38.609 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@11982c95
+2023-07-11 18:16:38.611 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 18:16:38.635 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 18:16:38.665 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 18:16:38.667 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 18:16:38.747 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 18:16:38.834 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 18:16:38.985 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 18:16:39.370 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 18:16:39.373 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 18:16:39.691 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 18:16:40.309 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79b3ac86, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74c45141, org.springframework.security.web.context.SecurityContextHolderFilter@73e271b6, org.springframework.security.web.header.HeaderWriterFilter@5fc6924a, org.springframework.web.filter.CorsFilter@296b4ca3, org.springframework.security.web.authentication.logout.LogoutFilter@202ddf5a, com.example.leonproject.config.JWTAuthenticationFilter@21b52437, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@879d36f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@158a0f0d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f8f6f29, org.springframework.security.web.session.SessionManagementFilter@ab39cea, org.springframework.security.web.access.ExceptionTranslationFilter@a5583ff, org.springframework.security.web.access.intercept.AuthorizationFilter@28bea98b]
+2023-07-11 18:16:40.510 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 18:16:40.537 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 18:16:40.547 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.551 seconds (process running for 3.973)
+2023-07-11 18:16:40.667 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:18:16:40工時表更新成功
+2023-07-11 18:16:46.283 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 18:16:46.283 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 18:16:46.284 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 18:16:46.350 [http-nio-8080-exec-2] INFO  c.e.leonproject.aop.AccessLogAspect - Access Log - URL: http://localhost:8080/LeonAPI/dev/login, Method: POST, Params: [com.example.leonproject.controller.pojo.LoginDTO@1c711d2f]
+2023-07-11 18:16:50.694 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:18:16:50工時表更新成功
+2023-07-11 18:16:53.174 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 18:16:53.176 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 18:16:53.181 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 18:32:12.341 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 19484 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 18:32:12.343 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 18:32:12.371 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 18:32:12.372 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 18:32:12.881 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 18:32:12.917 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+2023-07-11 18:32:13.407 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 18:32:13.413 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 18:32:13.414 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 18:32:13.451 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 18:32:13.452 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1080 ms
+2023-07-11 18:32:13.531 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 18:32:13.703 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74d57b7e
+2023-07-11 18:32:13.704 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 18:32:13.728 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 18:32:13.759 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 18:32:13.761 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 18:32:13.841 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 18:32:13.927 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 18:32:14.088 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 18:32:14.470 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 18:32:14.473 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 18:32:14.737 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 18:32:15.376 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@28bea98b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a478cb3, org.springframework.security.web.context.SecurityContextHolderFilter@671154bb, org.springframework.security.web.header.HeaderWriterFilter@709cd52b, org.springframework.web.filter.CorsFilter@79b3ac86, org.springframework.security.web.authentication.logout.LogoutFilter@6b763304, com.example.leonproject.config.JWTAuthenticationFilter@4558ffef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73e271b6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@315352fd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74c45141, org.springframework.security.web.session.SessionManagementFilter@e0a87af, org.springframework.security.web.access.ExceptionTranslationFilter@c311a49, org.springframework.security.web.access.intercept.AuthorizationFilter@3476e035]
+2023-07-11 18:32:15.586 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 18:32:15.614 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 18:32:15.624 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.582 seconds (process running for 4.009)
+2023-07-11 18:32:15.740 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:18:32:15工時表更新成功
+2023-07-11 18:32:18.861 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 18:32:18.861 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 18:32:18.862 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 18:32:18.927 [http-nio-8080-exec-2] INFO  c.e.leonproject.aop.AccessLogAspect - Access Log - URL: http://localhost:8080/LeonAPI/dev/login, Method: POST, Params: [com.example.leonproject.controller.pojo.LoginDTO@76816388]
+2023-07-11 18:32:26.811 [http-nio-8080-exec-3] INFO  c.e.leonproject.aop.AccessLogAspect - Access Log - URL: http://localhost:8080/LeonAPI/dev/login, Method: POST, Params: [com.example.leonproject.controller.pojo.LoginDTO@b87b855]
+2023-07-11 18:32:28.765 [http-nio-8080-exec-4] INFO  c.e.leonproject.aop.AccessLogAspect - Access Log - URL: http://localhost:8080/LeonAPI/dev/login, Method: POST, Params: [com.example.leonproject.controller.pojo.LoginDTO@31cd7870]
+2023-07-11 18:32:35.767 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:18:32:35工時表更新成功
+2023-07-11 18:32:55.785 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:18:32:55工時表更新成功
+2023-07-11 18:33:15.802 [pool-3-thread-2] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:18:33:15工時表更新成功
+2023-07-11 18:33:17.387 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 18:33:17.389 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 18:33:17.394 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-11 18:34:32.869 [restartedMain] INFO  c.e.l.LeonProjectApplication - Starting LeonProjectApplication using Java 17.0.7 with PID 23084 (C:\Users\leon.yu\IdeaProjects\LeonProject\target\classes started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-11 18:34:32.870 [restartedMain] INFO  c.e.l.LeonProjectApplication - The following 1 profile is active: "dev"
+2023-07-11 18:34:32.902 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-11 18:34:32.903 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-11 18:34:33.401 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-11 18:34:33.440 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+2023-07-11 18:34:33.917 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-11 18:34:33.923 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-11 18:34:33.923 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-11 18:34:33.962 [restartedMain] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring embedded WebApplicationContext
+2023-07-11 18:34:33.963 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1059 ms
+2023-07-11 18:34:34.045 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-11 18:34:34.215 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56548e43
+2023-07-11 18:34:34.216 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-11 18:34:34.241 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-11 18:34:34.272 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-11 18:34:34.274 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-11 18:34:34.359 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 18:34:34.446 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-11 18:34:34.600 [restartedMain] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-11 18:34:34.986 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-11 18:34:34.988 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 18:34:35.261 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-11 18:34:35.886 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2c1e59dc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21bbda31, org.springframework.security.web.context.SecurityContextHolderFilter@1029286d, org.springframework.security.web.header.HeaderWriterFilter@6d65282, org.springframework.web.filter.CorsFilter@b50b3a1, org.springframework.security.web.authentication.logout.LogoutFilter@74282a89, com.example.leonproject.config.JWTAuthenticationFilter@1c8def07, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@298be3ba, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a7a603b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d12f01, org.springframework.security.web.session.SessionManagementFilter@23495179, org.springframework.security.web.access.ExceptionTranslationFilter@3e2d6b62, org.springframework.security.web.access.intercept.AuthorizationFilter@2561f40b]
+2023-07-11 18:34:36.088 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-07-11 18:34:36.116 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/LeonAPI/dev'
+2023-07-11 18:34:36.125 [restartedMain] INFO  c.e.l.LeonProjectApplication - Started LeonProjectApplication in 3.57 seconds (process running for 4.002)
+2023-07-11 18:34:36.230 [pool-3-thread-1] INFO  c.e.l.schedule.TimeSheetScheduler - ===:時間:18:34:36工時表更新成功
+2023-07-11 18:34:37.379 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/LeonAPI/dev] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-11 18:34:37.379 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-11 18:34:37.380 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-07-11 18:34:37.449 [http-nio-8080-exec-2] INFO  c.e.leonproject.aop.AccessLogAspect - Access Log - URL: http://localhost:8080/LeonAPI/dev/login, Method: POST, Params: [LoginDTO{username='test3', password='123456789'}]
+2023-07-11 18:34:51.706 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-11 18:34:51.708 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-11 18:34:51.712 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

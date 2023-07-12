@@ -13,7 +13,6 @@ import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.sql.Time;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -52,9 +51,9 @@ public class PunchClockService {
         return new PunchClockResponseDTO(punchClockDTO.getUsername(), "打卡成功");
     }
 
-    /*
-    * 沒有transactional的示範
-    * */
+    /**
+     * 沒有transactional的示範
+     * **/
     public PunchClockResponseDTO failPunchClock(PunchClockDTO punchClockDTO) {
 
         AccountDO accountDO = accountRepository.findAccountByUsername(punchClockDTO.getUsername())
@@ -86,9 +85,9 @@ public class PunchClockService {
         return new PunchClockResponseDTO(punchClockDTO.getUsername(), "打卡成功");
     }
 
-    /*
+    /**
      * 加了transactional的示範
-     * */
+     * **/
     @Transactional
     public PunchClockResponseDTO failPunchClockTransactional(PunchClockDTO punchClockDTO) {
 
@@ -104,7 +103,6 @@ public class PunchClockService {
             newPunchClockDO.setClockIn(LocalDateTime.now());
             newPunchClockDO.setAccountDO(accountDO);
             punchClockRepository.save(newPunchClockDO);
-            log.info("好啊");
         }
 
         if (punchClockDO != null && Duration.between(punchClockDO.getClockOut(), LocalDateTime.now()).toSeconds() <= 50) {

@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 @Slf4j
@@ -18,12 +17,13 @@ import java.util.Arrays;
 @Component
 public class AccessLogAspect {
 
-    @Pointcut("execution(public * com.example.leonproject.controller.*.*(..))")
+    @Pointcut("execution(public * com.example.leonproject.controller.*.*(..))&& " +
+            "!(execution(public * com.example.leonproject.controller.LoginController.*(..)) || execution(public * com.example.leonproject.controller.RegistrationController.*(..)))")
     public void accessLogPointcut() {
     }
 
     @Around("accessLogPointcut()")
-    public Object logAccess(ProceedingJoinPoint joinPoint) throws Throwable {
+    public Object accessLog(ProceedingJoinPoint joinPoint) throws Throwable {
 
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
