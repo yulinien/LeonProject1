@@ -20,7 +20,7 @@ public class PunchClockController {
         this.punchClockService = punchClockService;
     }
 
-    @PostMapping("/clock_in")
+    @PostMapping("/clock-in")
     public ResponseEntity<PunchClockResponseDTO> clockIn(@RequestBody PunchClockDTO punchClockDTO) {
 
         PunchClockResponseDTO punchClockResponseDTO = punchClockService.punchClock(punchClockDTO);
@@ -28,7 +28,7 @@ public class PunchClockController {
         return ResponseEntity.ok().body(punchClockResponseDTO);
     }
 
-    @PostMapping("/fail_clock_in")
+    @PostMapping("/fail-clock-in")
     public ResponseEntity<PunchClockResponseDTO> failClockIn(@RequestBody PunchClockDTO punchClockDTO) {
 
         PunchClockResponseDTO punchClockResponseDTO = punchClockService.failPunchClock(punchClockDTO);
@@ -36,7 +36,7 @@ public class PunchClockController {
         return ResponseEntity.ok().body(punchClockResponseDTO);
     }
 
-    @PostMapping("/fail_clock_in_transactional")
+    @PostMapping("/fail-clock-in-transactional")
     public ResponseEntity<PunchClockResponseDTO> failPunchClockTransactional(@RequestBody PunchClockDTO punchClockDTO) {
 
         PunchClockResponseDTO punchClockResponseDTO = punchClockService.failPunchClockTransactional(punchClockDTO);

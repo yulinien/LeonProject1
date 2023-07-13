@@ -28,7 +28,7 @@ public class TimeSheetScheduler {
     public void timeSheetSchedule() {
         boolean result = timeSheetAsyncTask.timeSheetAsync(LocalDate.now());
         if (result) {
-            logger.info("===:時間:{}工時表更新成功", LocalDateTime.now().format(formatter));
+            logger.info("時間:{}工時表更新成功", LocalDateTime.now().format(formatter));
         } else {
             logger.info("更新失敗");
         }

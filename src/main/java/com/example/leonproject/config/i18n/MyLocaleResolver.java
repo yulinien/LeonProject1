@@ -1,4 +1,4 @@
-package com.example.leonproject.config;
+package com.example.leonproject.config.i18n;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

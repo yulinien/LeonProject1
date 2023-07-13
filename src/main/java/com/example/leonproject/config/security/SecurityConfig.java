@@ -1,4 +1,4 @@
-package com.example.leonproject.config;
+package com.example.leonproject.config.security;
 
 
 import org.springframework.context.annotation.Bean;
@@ -28,9 +28,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/registration",
                                 "/login",
-                                "/clock_in",
-                                "/fail_clock_in",
-                                "/fail_clock_in_transactional",
+                                "/clock-in",
+                                "/fail-clock-in",
+                                "/fail-clock-in-transactional",
                                 "/swagger-resources",
                                 "/swagger-resources/**",
                                 "/v3/api-docs",

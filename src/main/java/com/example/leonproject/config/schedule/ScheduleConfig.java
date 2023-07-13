@@ -1,4 +1,4 @@
-package com.example.leonproject.config;
+package com.example.leonproject.config.schedule;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;

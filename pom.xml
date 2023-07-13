@@ -143,7 +143,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <activeProfile>dev-db1</activeProfile>
+                <activeProfile>dev</activeProfile>
             </properties>
         </profile>
         <profile>

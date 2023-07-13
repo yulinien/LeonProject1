@@ -1,6 +1,6 @@
 package com.example.leonproject.util;
 
-import com.example.leonproject.config.SecurityConstants;
+import com.example.leonproject.config.security.SecurityConstants;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

@@ -1,7 +1,8 @@
 <configuration>
     <!--載入Springboot 默認配置-->
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
-    <!-- 設置日誌級別 -->
+
+    <!-- 設置日誌級別 這段配置表示根 logger 的日誌級別為 info，而且它將日誌事件同時路由到 INFO_FILE 和 ERROR_FILE 兩個 appender。-->
     <root level="info">
         <appender-ref ref="INFO_FILE"/>
         <appender-ref ref="ERROR_FILE"/>
@@ -10,8 +11,19 @@
     <!-- 定義日志输出目錄 -->
     <property name="LOG_DIR" value="./logs"/>
 
-    <!-- 控制台输出 -->
+
+    <turboFilters class="ch.qos.logback.classic.turbo.LevelFilter">
+        <level>debug</level>
+        <onMatch>DENY</onMatch>
+    </turboFilters>
+
+    <!--控制台輸出-->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+<!--        <filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+<!--            <level>DEBUG</level>-->
+<!--            <onMatch>ACCEPT</onMatch>-->
+<!--            <onMismatch>DENY</onMismatch>-->
+<!--        </filter>-->
         <encoder>
             <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
@@ -23,7 +35,7 @@
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>${LOG_DIR}/info-%d{yyyy-MM-dd}.log</fileNamePattern>
         </rollingPolicy>
-        <filter class="ch.qos.logback.classic.filter.LevelFilter"> <!--過濾log等級-->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter"> <!--過濾log等級 特定log等級不寫入日誌檔案-->
             <level>info</level>
             <onMatch>ACCEPT</onMatch>
             <onMismatch>DENY</onMismatch>
@@ -49,19 +61,17 @@
         </encoder>
     </appender>
 
-
     <!-- 定義特定的日志級別 -->
-    <logger name="com.example.leonproject.api" level="info" additivity="false">
+    <logger name="com.example.leonproject.infolog" level="info" additivity="false">
         <appender-ref ref="INFO_FILE"/>
-
     </logger>
 
-    <logger name="com.example.leonproject.api2" level="error" additivity="false">
+    <logger name="com.example.leonproject.errorlog" level="error" additivity="false">
         <appender-ref ref="ERROR_FILE"/>
     </logger>
 
-    <springProfile name="debug">
-        <root level="debug"/>
-    </springProfile>
+    <logger name="com.example.leonproject.aop" level="debug" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
 
 </configuration>

@@ -1,7 +1,7 @@
 package com.example.leonproject.controller.service;
 
 
-import com.example.leonproject.config.MyLocaleResolver;
+import com.example.leonproject.config.i18n.MyLocaleResolver;
 import com.example.leonproject.controller.pojo.RegistrationDTO;
 import com.example.leonproject.controller.pojo.RegistrationResponseDTO;
 import com.example.leonproject.dao.entity.AccountDO;

@@ -31,6 +31,7 @@ public class AccessLogAspect {
         String method = request.getMethod();
         String params = Arrays.toString(joinPoint.getArgs());
 
+        log.debug("Access Log - URL: {}, Method: {}, Params: {}", url, method, params);
         log.info("Access Log - URL: {}, Method: {}, Params: {}", url, method, params);
 
         return joinPoint.proceed();

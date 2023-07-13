@@ -1,6 +1,6 @@
 package com.example.leonproject.exception;
 
-import com.example.leonproject.config.MyLocaleResolver;
+import com.example.leonproject.config.i18n.MyLocaleResolver;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
@@ -51,7 +51,7 @@ public class GlobalExceptionHandler {
 
         ErrorResponse errorResponse = new ErrorResponse(-1, errorMessage);
 
-        log.error("Punch clock failed: {}", errorMessage);
+        log.error("Punch clock failed:{}", errorMessage);
 
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
     }

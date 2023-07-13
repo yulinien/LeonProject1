@@ -1,4 +1,4 @@
-package com.example.leonproject.config;
+package com.example.leonproject.config.security;
 
 import com.example.leonproject.dao.entity.AccountDO;
 import com.example.leonproject.dao.repository.AccountRepository;
