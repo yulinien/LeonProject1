@@ -26,6 +26,7 @@ public class MyLocaleResolver implements LocaleResolver {
                 .filter(split -> split.length == 2)
                 .map(split -> new Locale(split[0], split[1]))
                 .orElse(locale);
+        // 其實直接return locale也可
     }
 
     @Override

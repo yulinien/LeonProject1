@@ -31,7 +31,9 @@ public class LoginService {
 
         if (accountDO == null) {
             return new LoginResponseDTO(-1, "user not found");
-        } else {
+        }
+
+        else {
             return BCryptUtil.passwordCheck(loginDTO.getPassword(), accountDO.getPassword())
                     ? new LoginResponseDTO(1, "Login Success")
                     : new LoginResponseDTO(-1, "passwordInvalid");

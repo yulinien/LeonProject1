@@ -29,7 +29,7 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
         String path = request.getRequestURI();
-        return !"/LeonAPI/changePassword".equals(path);
+        return !"/LeonAPI/dev/changePassword".equals(path);
     }
 
     @Override

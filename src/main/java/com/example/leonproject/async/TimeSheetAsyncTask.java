@@ -40,5 +40,4 @@ public class TimeSheetAsyncTask {
 
         return true;
     }
-
 }

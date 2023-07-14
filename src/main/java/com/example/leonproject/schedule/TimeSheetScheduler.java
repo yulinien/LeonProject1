@@ -24,7 +24,7 @@ public class TimeSheetScheduler {
         this.timeSheetAsyncTask = timeSheetAsyncTask;
     }
 
-    @Scheduled(fixedDelay = 20000)
+    @Scheduled(fixedDelay = 60000)
     public void timeSheetSchedule() {
         boolean result = timeSheetAsyncTask.timeSheetAsync(LocalDate.now());
         if (result) {
