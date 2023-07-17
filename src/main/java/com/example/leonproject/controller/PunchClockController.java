@@ -6,7 +6,6 @@ import com.example.leonproject.controller.pojo.PunchClockResponseDTO;
 import com.example.leonproject.controller.service.PunchClockService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.annotation.security.PermitAll;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
