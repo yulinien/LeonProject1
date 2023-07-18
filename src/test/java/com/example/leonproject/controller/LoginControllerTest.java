@@ -1,4 +1,4 @@
 package com.example.leonproject.controller;
 
-public class LoginController {
+public class LoginControllerTest {
 }
