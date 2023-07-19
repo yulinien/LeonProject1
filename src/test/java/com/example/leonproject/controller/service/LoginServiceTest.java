@@ -6,11 +6,13 @@ import com.example.leonproject.dao.entity.AccountDO;
 import com.example.leonproject.dao.mybatis.AccountMapper;
 import com.example.leonproject.exception.InputValidationException;
 import com.example.leonproject.util.BCryptUtil;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.*;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockedStatic;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -29,23 +31,14 @@ public class LoginServiceTest {
 
     private LoginDTO loginDTO;
 
-    private AutoCloseable closeable;
-
     @BeforeEach
     public void setup() {
-        closeable = MockitoAnnotations.openMocks(this);
         loginService = new LoginService(accountMapper);
         loginDTO = new LoginDTO();
         loginDTO.setUsername("testUser");
         loginDTO.setPassword("testPassword");
         assertNotNull(accountMapper);
     }
-
-    @AfterEach
-    public void teardown() throws Exception {
-        closeable.close();
-    }
-
 
     @Test
     public void userLogin_UsernameIsEmpty_ThrowsException() {

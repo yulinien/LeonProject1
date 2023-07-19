@@ -198,3 +198,24 @@
 2023-07-18 12:25:23.322 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-07-18 12:25:23.324 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2023-07-18 12:25:23.329 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-18 15:31:41.122 [main] INFO  c.e.l.LeonProjectApplicationTests - Starting LeonProjectApplicationTests using Java 17.0.7 with PID 19464 (started by leon.yu in C:\Users\leon.yu\IdeaProjects\LeonProject)
+2023-07-18 15:31:41.124 [main] INFO  c.e.l.LeonProjectApplicationTests - The following 1 profile is active: "dev"
+2023-07-18 15:31:41.789 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-18 15:31:41.836 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 3 JPA repository interfaces.
+2023-07-18 15:31:42.396 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-18 15:31:42.661 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fcd3a6f
+2023-07-18 15:31:42.663 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-18 15:31:42.695 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-18 15:31:42.736 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-18 15:31:42.737 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-18 15:31:42.865 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-18 15:31:42.872 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-18 15:31:43.066 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-18 15:31:43.407 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-18 15:31:43.410 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-18 15:31:43.784 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-07-18 15:31:45.213 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2ae84b49, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65fd3ebe, org.springframework.security.web.context.SecurityContextHolderFilter@60d1b2a7, org.springframework.security.web.header.HeaderWriterFilter@7085261e, org.springframework.web.filter.CorsFilter@63cf0da6, org.springframework.security.web.authentication.logout.LogoutFilter@79860b25, com.example.leonproject.config.security.JWTAuthenticationFilter@bb510b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ac24c17, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fd2716f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60f3813e, org.springframework.security.web.session.SessionManagementFilter@47ccb397, org.springframework.security.web.access.ExceptionTranslationFilter@7ce3c0cc, org.springframework.security.web.access.intercept.AuthorizationFilter@4d696bac]
+2023-07-18 15:31:45.676 [main] INFO  c.e.l.LeonProjectApplicationTests - Started LeonProjectApplicationTests in 4.854 seconds (process running for 6.766)
+2023-07-18 15:31:45.734 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-18 15:31:45.738 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-18 15:31:45.749 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

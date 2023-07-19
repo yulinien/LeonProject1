@@ -28,6 +28,5 @@ public class ChangePasswordService {
         accountDO.setPassword(BCryptUtil.passwordEncode(changePasswordDTO.getNewPassword()));
         accountRepository.save(accountDO);
         return new ChangePasswordResponseDTO(1, "ChangePassword Success");
-
     }
 }

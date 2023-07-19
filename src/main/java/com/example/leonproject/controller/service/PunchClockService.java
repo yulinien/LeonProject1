@@ -38,6 +38,7 @@ public class PunchClockService {
 
         PunchClockDO punchClockDO = punchClockRepository.findLatestRecordsForEachUser(accountDO.getId())
                 .orElse(null);
+
         //isPositiveTimeDiff
         if (punchClockDO == null || !(TimeDiffUtil.isSameDate(punchClockDO.getClockIn()))) {
             PunchClockDO newPunchClockDO = new PunchClockDO();
@@ -48,12 +49,13 @@ public class PunchClockService {
             punchClockDO.setClockOut(LocalDateTime.now());
             punchClockRepository.save(punchClockDO);
         }
+
         return new PunchClockResponseDTO(punchClockDTO.getUsername(), "打卡成功");
     }
 
     /**
      * 沒有transactional的示範
-     * **/
+     **/
     public PunchClockResponseDTO failPunchClock(PunchClockDTO punchClockDTO) {
 
         AccountDO accountDO = accountRepository.findAccountByUsername(punchClockDTO.getUsername())
@@ -87,7 +89,7 @@ public class PunchClockService {
 
     /**
      * 加了transactional的示範
-     * **/
+     **/
     @Transactional
     public PunchClockResponseDTO failPunchClockTransactional(PunchClockDTO punchClockDTO) {
 
