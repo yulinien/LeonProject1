@@ -30,5 +30,3 @@ public class ChangePasswordController {
         return ResponseEntity.ok().body(changePasswordResponseDTO);
     }
 }
-
-

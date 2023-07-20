@@ -24,7 +24,7 @@ public class RegistrationController {
         this.registrationService = registrationService;
     }
 
-    @Operation(summary = "註冊" , description = "需要攜帶JWT Token")
+    @Operation(summary = "註冊")
     @PostMapping("/registration")
     public ResponseEntity<RegistrationResponseDTO> createUser(@RequestBody RegistrationDTO registrationDTO, HttpServletRequest httpServletRequest) {
 
