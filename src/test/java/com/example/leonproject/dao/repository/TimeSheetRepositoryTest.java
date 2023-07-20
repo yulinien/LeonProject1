@@ -1,6 +1,5 @@
 package com.example.leonproject.dao.repository;
 
-import com.example.leonproject.dao.entity.AccountDO;
 import com.example.leonproject.dao.entity.TimeSheetDO;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -40,6 +39,4 @@ public class TimeSheetRepositoryTest {
         List<TimeSheetDO> savedTimeSheetList = timeSheetRepository.findAll();
         Assertions.assertEquals(10, savedTimeSheetList.size());
     }
-
-
 }

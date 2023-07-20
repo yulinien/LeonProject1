@@ -2,6 +2,8 @@ package com.example.leonproject.dao.repository;
 
 import com.example.leonproject.dao.entity.AccountDO;
 import com.example.leonproject.dao.entity.PunchClockDO;
+import jakarta.transaction.Transactional;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +19,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
+@Transactional
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @TestPropertySource(locations = "/application-test.properties")
@@ -29,13 +31,17 @@ public class PunchClockRepositoryTest {
     @Autowired
     private AccountRepository accountRepository;
 
-    @BeforeEach
-    void setup() {
+    AccountDO accountDO1;
 
-        AccountDO accountDO1 = AccountDO.builder().id(1).username("testUser1").build();
-        AccountDO accountDO2 = AccountDO.builder().id(2).username("testUser2").build();
-        accountRepository.save(accountDO1);
-        accountRepository.save(accountDO2);
+    AccountDO accountDO2;
+
+    @BeforeEach
+    void beforeEach() {
+
+        accountDO1 = AccountDO.builder().username("testUser1").build();
+        accountDO2 = AccountDO.builder().username("testUser2").build();
+        accountDO1 = accountRepository.save(accountDO1);
+        accountDO2 = accountRepository.save(accountDO2);
 
         List<PunchClockDO> punchClockDOList = Arrays.asList(
 
@@ -82,21 +88,26 @@ public class PunchClockRepositoryTest {
         punchClockRepository.saveAll(punchClockDOList);
     }
 
+    @AfterEach
+    void afterEach(){
+        accountRepository.deleteAll();
+    }
+
     @Test
     public void findLatestRecordsForEachUser_ReturnsAnUser() {
 
-        Optional<PunchClockDO> result = punchClockRepository.findLatestRecordsForEachUser(1);
+        Optional<PunchClockDO> result = punchClockRepository.findLatestRecordsForEachUser(accountDO1.getId());
 
         assertTrue(result.isPresent());
         assertEquals(7, result.get().getId());
     }
 
     @Test
-    public void findAllUserWithCompleteAttendance_ReturnsAllUsers(){
+    public void findAllUserWithCompleteAttendance_ReturnsAllUsers() {
 
-        List<PunchClockDO> result = punchClockRepository.findAllUserWithCompleteAttendance(LocalDate.of(2022,1,1));
+        List<PunchClockDO> result = punchClockRepository.findAllUserWithCompleteAttendance(LocalDate.of(2022, 1, 1));
 
         assertFalse(result.isEmpty());
-        assertEquals(6,result.size());
+        assertEquals(6, result.size());
     }
 }

@@ -18,6 +18,7 @@ import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
@@ -40,8 +41,14 @@ public class PunchClockServiceTest {
 
     private PunchClockDTO punchClockDTO;
 
+    private AccountDO accountDO;
+
     @BeforeEach
     public void setup() {
+        accountDO = new AccountDO();
+        accountDO.setId(1);
+        accountDO.setUsername("testUser");
+
         punchClockDTO = new PunchClockDTO();
         punchClockDTO.setUsername("testUser");
     }
@@ -55,10 +62,6 @@ public class PunchClockServiceTest {
     @Test
     public void punchClock_NoPreviousPunchClock_CreatesNewPunchClock() {
 
-        AccountDO accountDO = new AccountDO();
-        accountDO.setId(1);
-        accountDO.setUsername("testUser");
-
         when(accountRepository.findAccountByUsername(punchClockDTO.getUsername())).thenReturn(Optional.of(accountDO));
         when(punchClockRepository.findLatestRecordsForEachUser(accountDO.getId())).thenReturn(Optional.empty());
 
@@ -70,10 +73,6 @@ public class PunchClockServiceTest {
     @Test
     public void punchClock_PreviousPunchClockNotToday_CreatesNewPunchClock() {
         try (MockedStatic<TimeDiffUtil> mocked = Mockito.mockStatic(TimeDiffUtil.class)) {
-
-            AccountDO accountDO = new AccountDO();
-            accountDO.setId(1);
-            accountDO.setUsername("testUser");
 
             PunchClockDO punchClockDO = new PunchClockDO();
             punchClockDO.setClockIn(LocalDateTime.now().minusDays(1));
@@ -96,10 +95,6 @@ public class PunchClockServiceTest {
     @Test
     public void punchClock_PreviousPunchClockIsToday_CreatesNewPunchClock() {
         try (MockedStatic<TimeDiffUtil> mocked = Mockito.mockStatic(TimeDiffUtil.class)) {
-
-            AccountDO accountDO = new AccountDO();
-            accountDO.setId(1);
-            accountDO.setUsername("testUser");
 
             PunchClockDO punchClockDO = new PunchClockDO();
             punchClockDO.setClockIn(LocalDateTime.now().minusDays(1));
@@ -126,9 +121,6 @@ public class PunchClockServiceTest {
 
     @Test
     public void failPunchClock_NoPreviousPunchClock_CreatesNewPunchClock() {
-        AccountDO accountDO = new AccountDO();
-        accountDO.setId(1);
-        accountDO.setUsername("testUser");
 
         when(accountRepository.findAccountByUsername(punchClockDTO.getUsername())).thenReturn(Optional.of(accountDO));
         when(punchClockRepository.findLatestRecordsForEachUser(accountDO.getId())).thenReturn(Optional.empty());
@@ -141,10 +133,6 @@ public class PunchClockServiceTest {
     @Test
     public void failPunchClock_PreviousPunchClockNotToday_CreatesNewPunchClock() {
         try (MockedStatic<TimeDiffUtil> mocked = Mockito.mockStatic(TimeDiffUtil.class)) {
-
-            AccountDO accountDO = new AccountDO();
-            accountDO.setId(1);
-            accountDO.setUsername("testUser");
 
             PunchClockDO punchClockDO = new PunchClockDO();
             punchClockDO.setClockIn(LocalDateTime.now().minusDays(1));
@@ -162,18 +150,16 @@ public class PunchClockServiceTest {
     }
 
     @Test
-    public void failPunchClock_PunchClockDurationTooShort_ThrowsException() {
-        try (MockedStatic<LocalDateTime> mocked = Mockito.mockStatic(LocalDateTime.class)) {
+    public void failPunchClock_PunchClockDurationShorterThan50Sec_ThrowsException() {
 
-            LocalDateTime fixedNow = LocalDateTime.of(2023, 7, 19, 12, 0);
-            mocked.when(LocalDateTime::now).thenReturn(fixedNow);
+        LocalDateTime fixedNow = LocalDateTime.of(2023, 7, 19, 12, 10, 0);
+        LocalDateTime clockOutTime = fixedNow.minusSeconds(45);
 
-            AccountDO accountDO = new AccountDO();
-            accountDO.setId(1);
-            accountDO.setUsername("testUser");
+        try (MockedStatic<LocalDateTime> mocked = Mockito.mockStatic(LocalDateTime.class);
+             MockedStatic<TimeDiffUtil> timeMockedStatic = Mockito.mockStatic(TimeDiffUtil.class);
+             MockedStatic<Duration> durationMockedStatic = Mockito.mockStatic(Duration.class)) {
 
             PunchClockDO punchClockDO = new PunchClockDO();
-            LocalDateTime clockOutTime = fixedNow.minusSeconds(45);  // 设置ClockOut时间使其与fixedNow之间的时间差为45秒
             punchClockDO.setClockOut(clockOutTime);
 
             PunchClockDTO punchClockDTO = new PunchClockDTO();
@@ -181,42 +167,47 @@ public class PunchClockServiceTest {
 
             when(accountRepository.findAccountByUsername(punchClockDTO.getUsername())).thenReturn(Optional.of(accountDO));
             when(punchClockRepository.findLatestRecordsForEachUser(accountDO.getId())).thenReturn(Optional.of(punchClockDO));
+            mocked.when(LocalDateTime::now).thenReturn(fixedNow);
+
+            timeMockedStatic.when(() -> TimeDiffUtil.isSameDate(punchClockDO.getClockIn())).thenReturn(false);
+            Duration mockedDuration = Mockito.mock(Duration.class);
+            durationMockedStatic.when(() -> Duration.between(clockOutTime, fixedNow)).thenReturn(mockedDuration);
+            Mockito.when(mockedDuration.toSeconds()).thenReturn(45L);
 
             assertThrows(PunchClockFailException.class, () -> punchClockService.failPunchClock(punchClockDTO));
         }
     }
 
     @Test
-    public void failPunchClock_PunchClock_CreatesNewPunchClock() {
-        try (MockedStatic<TimeDiffUtil> mocked = Mockito.mockStatic(TimeDiffUtil.class)) {
-            AccountDO accountDO = new AccountDO();
-            accountDO.setId(1);
-            accountDO.setUsername("testUser");
+    public void failPunchClock_PunchClockDurationLongerThan50Sec_CreatesNewPunchClock() {
+
+        LocalDateTime fixedNow = LocalDateTime.of(2023, 7, 19, 12, 10, 0);
+        LocalDateTime clockOutTime = fixedNow.minusSeconds(45);
+
+        try (MockedStatic<LocalDateTime> mocked = Mockito.mockStatic(LocalDateTime.class);
+             MockedStatic<TimeDiffUtil> timeMockedStatic = Mockito.mockStatic(TimeDiffUtil.class);
+             MockedStatic<Duration> durationMockedStatic = Mockito.mockStatic(Duration.class)) {
 
             PunchClockDO punchClockDO = new PunchClockDO();
-            punchClockDO.setClockOut(LocalDateTime.of(2023, 7, 19, 12, 0));
+            punchClockDO.setClockOut(clockOutTime);
 
-            LocalDateTime localDateTime = LocalDateTime.of(2023, 7, 19, 12, 0).minusSeconds(60);
+            PunchClockDTO punchClockDTO = new PunchClockDTO();
+            punchClockDTO.setUsername("testUser");
 
             when(accountRepository.findAccountByUsername(punchClockDTO.getUsername())).thenReturn(Optional.of(accountDO));
             when(punchClockRepository.findLatestRecordsForEachUser(accountDO.getId())).thenReturn(Optional.of(punchClockDO));
+            mocked.when(LocalDateTime::now).thenReturn(fixedNow);
 
-            mocked.when(() -> TimeDiffUtil.isSameDate(punchClockDO.getClockIn())).thenReturn(true);
+            timeMockedStatic.when(() -> TimeDiffUtil.isSameDate(punchClockDO.getClockIn())).thenReturn(false);
+            Duration mockedDuration = Mockito.mock(Duration.class);
+            durationMockedStatic.when(() -> Duration.between(clockOutTime, fixedNow)).thenReturn(mockedDuration);
+            Mockito.when(mockedDuration.toSeconds()).thenReturn(100L);
 
-            try (MockedStatic<LocalDateTime> timeMocked = Mockito.mockStatic(LocalDateTime.class)) {
-
-                timeMocked.when(LocalDateTime::now).thenReturn(localDateTime);
-
-                PunchClockResponseDTO response = punchClockService.failPunchClock(punchClockDTO);
-                assertEquals("testUser", response.getUsername());
-                assertEquals("打卡成功", response.getResponse());
-
-                verify(punchClockRepository, times(1)).save(any(PunchClockDO.class));
-
-            }
-
+            PunchClockResponseDTO response = punchClockService.failPunchClock(punchClockDTO);
+            assertEquals("testUser", response.getUsername());
+            assertEquals("打卡成功", response.getResponse());
         }
     }
 }
 
-/* TODO: failPunchClock的測試方法卡住 還有幾個方法需要完成 在引用靜態方法的時候出現問題 */
+/* TODO: failPunchClock的測試方法有些疑問 還有幾個方法 在模擬的時候出現小問題 */

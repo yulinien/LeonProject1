@@ -1,17 +1,17 @@
 package com.example.leonproject.controller;
 
 
+import com.example.leonproject.config.security.JWTAuthenticationFilter;
 import com.example.leonproject.controller.pojo.RegistrationDTO;
 import com.example.leonproject.controller.pojo.RegistrationResponseDTO;
 import com.example.leonproject.controller.service.RegistrationService;
-import com.example.leonproject.dao.entity.AccountDO;
-import com.example.leonproject.dao.repository.AccountRepository;
+import com.example.leonproject.exception.GlobalExceptionHandler;
+import com.example.leonproject.util.JWTUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentMatchers;
-import org.mockito.invocation.InvocationOnMock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -26,25 +26,27 @@ import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 @AutoConfigureMockMvc(addFilters = false)
-@WebMvcTest(RegistrationController.class)
+@WebMvcTest(controllers = RegistrationController.class)
 @ExtendWith(MockitoExtension.class)
 public class RegistrationControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
+    @Autowired
+    RegistrationController registrationController;
+
     @MockBean
     private RegistrationService registrationService;
 
-    @Autowired
-    private AccountRepository accountRepository;
+    @MockBean
+    private JWTUtil jwtUtil;
 
-    private AccountDO accountDO;
+    @MockBean
+    private JWTAuthenticationFilter jwtAuthenticationFilter;
 
-    private RegistrationDTO registrationDTO;
-
-    private RegistrationResponseDTO registrationResponseDTO;
-
+    @MockBean
+    private GlobalExceptionHandler globalExceptionHandler;
 
     @Test
     public void registrationController_Registration_ReturnResponseDTO() throws Exception {
@@ -55,17 +57,17 @@ public class RegistrationControllerTest {
 
         String jsonContent = new ObjectMapper().writeValueAsString(registrationDTO);
 
-        given(registrationService.createUser(ArgumentMatchers.any(), ArgumentMatchers.any())).willAnswer((InvocationOnMock::getArguments));
+        RegistrationResponseDTO responseDTO = new RegistrationResponseDTO(1, "Registration Success!");
+
+        given(registrationService.createUser(ArgumentMatchers.any(), ArgumentMatchers.any())).willReturn((responseDTO));
 
         ResultActions response = mockMvc.perform(post("/registration")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(jsonContent));
 
         response.andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.username", CoreMatchers.is(registrationDTO.getUsername())))
-                .andExpect(MockMvcResultMatchers.jsonPath("$.password", CoreMatchers.is(registrationDTO.getPassword())));
+                .andExpect(MockMvcResultMatchers.jsonPath("$.status", CoreMatchers.is(responseDTO.getStatus())))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.errorMessage", CoreMatchers.is(responseDTO.getErrorMessage())));
 
     }
-
-
 }
